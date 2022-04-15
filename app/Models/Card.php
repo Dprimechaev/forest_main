@@ -14,7 +14,7 @@ class Card extends Model
         'card_id'
     ];
 
-    public function prepareBox()
+    public function box()
     {
         return $this->belongsTo(Box::class);
     }

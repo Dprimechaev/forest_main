@@ -15,4 +15,9 @@ class Box extends Model
         'title',
         'user_id'
     ];
+
+    public function card()
+    {
+        return $this->hasMany(Card::class);
+    }
 }

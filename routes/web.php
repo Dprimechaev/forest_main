@@ -24,5 +24,7 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home.index');
 
-Route::resource('card', CardController::class);
-Route::resource('box', BoxController::class);
+Route::middleware(['auth'])->group(function (){
+    Route::resource('card', CardController::class);
+    Route::resource('box', BoxController::class);
+});

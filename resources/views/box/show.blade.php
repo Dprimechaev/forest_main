@@ -6,17 +6,16 @@
         Создать карточку
     </button>
 
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
-{{--        <table>--}}
-{{--            <thead>--}}
-{{--                <th>Номер</th>--}}
-{{--                <th>Республика</th>--}}
-{{--            </thead>--}}
-{{--            <tbody>--}}
-{{--                <td>{{ $loop->iteration }}</td>--}}
-{{--                <td>{{ $card->first->republic }}</td>--}}
-{{--            </tbody>--}}
-{{--        </table>--}}
     <table class="table mt-5">
         <thead>
         <tr>
@@ -46,16 +45,11 @@
         </tbody>
     </table>
 
-
     <!-- Модальное окно -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
-                @if($errors->any())
-                    <h4>{{$errors}}</h4>
-                @endif
-                <form action="{{ route('card.store', ['box_id' => $box->id]) }}" method="post">
+                <form method="POST" action="{{ route('card.store', ['box_id' => $box->id]) }}">
                     @csrf
-                    <input type="text" value="1" name="card_id" hidden>
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Карточка Таксации</h5>
@@ -273,19 +267,19 @@
                                         Захламленность, м^3 га
                                     </th>
                                     <td>
-                                        <input type="text" style="width:60px; height: 24px" value="0">
+                                        <input type="littering" style="width:60px; height: 24px" value="0">
                                     </td>
                                     <th>
                                         В том числе ликвидной
                                     </th>
                                     <td>
-                                        <input type="text" style="width:60px; height: 24px" value="0">
+                                        <input type="liquid" style="width:60px; height: 24px" value="0">
                                     </td>
                                     <th>
                                         Сухостой м^3 га
                                     </th>
                                     <td>
-                                        <input type="text" style="width:60px; height: 24px" value="0">
+                                        <input type="deadwood" style="width:60px; height: 24px" value="0">
                                     </td>
                                 </tr>
                                 </tbody>

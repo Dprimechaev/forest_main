@@ -92,7 +92,7 @@
             </div>
         </div>
         <div class="ml-2 container-fluid">
-                @yield('content')1
+                @yield('content')
         </div>
     </div>
 </div>

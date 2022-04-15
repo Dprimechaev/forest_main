@@ -20,7 +20,7 @@ class CreateFirstsTable extends Migration
             $table->string('district')->nullable();
             $table->string('region')->nullable();
             $table->string('quarter')->nullable();
-            $table->string('distance');
+            $table->string('distance')->nullable();
             $table->string('renter')->nullable();
             $table->string('number')->nullable();
             $table->string('area')->nullable();;

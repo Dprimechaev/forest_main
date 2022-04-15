@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Card\CardRequest;
+use App\Models\Box;
 use App\Models\Card;
 use App\Models\First;
 use Illuminate\Http\Request;
@@ -35,15 +37,16 @@ class CardController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CardRequest $request, Box $box)
     {
         try {
-            $validated = $request->all();
+//            dd($request->all());
+            $validated = $request->validated();
             $card = Card::create(['box_id' => $validated['box_id']]);
             unset($validated['box_id']);
             $first = $card->first()->create($validated);
         } catch (Exception $e){
-            return redirect()->back()->withErrors($e->getMessage());
+            return redirect()->back()->withErrors($e->getMessage())->withInput();
         }
         return redirect()->back();
 

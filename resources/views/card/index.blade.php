@@ -12,17 +12,17 @@
             {{ $card->id }}
             {{ $cards->first->republic }}
         @endforeach
-
         <!-- Модальное окно -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 @if($errors->any())
                     <h4>{{$errors}}</h4>
                 @endif
-                <form action="{{ route('card.store') }}" method="post">
+
+                <form action="{{ route('card.store')}}" method="post">
                     @csrf
-                    <input type="text" value="" name="box_id" hidden>
-                    <input type="text" value="1" name="card_id" hidden>
+                    {{--<input type="text" value="" name="box_id" hidden>--}}
+                    {{--<input type="text" value="1" name="card_id" hidden>--}}
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Карточка Таксации</h5>
