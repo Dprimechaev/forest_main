@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\Card\FirstCardStoreRequest;
 use App\Http\Requests\Card\SecondCardStoreRequest;
+use App\Http\Requests\Card\ThirdCardStoreRequest;
 use App\Models\Box;
 use App\Models\Card;
 use Illuminate\Http\Request;
@@ -28,7 +29,8 @@ class CardController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(FirstCardStoreRequest $cardRequest, SecondCardStoreRequest $secondCardStoreRequest, Box $box)
+    public function store(FirstCardStoreRequest $cardRequest, SecondCardStoreRequest $secondCardStoreRequest,
+                          ThirdCardStoreRequest $thirdCardStoreRequest, Box $box)
     {
         try {
             /*values for first zone*/
@@ -39,6 +41,9 @@ class CardController extends Controller
             /*values for second zone*/
             $secondValidated = $secondCardStoreRequest->validated();
             $card->second()->create($secondValidated);
+            /*values for second zone*/
+            $thirdValidated = $thirdCardStoreRequest->validated();
+            $card->third()->create($thirdValidated);
         } catch (Exception $e){
             return back()->withInput()->withErrors($e->getMessage());
         }
@@ -91,6 +96,7 @@ class CardController extends Controller
         try {
             $card->first()->delete();
             $card->second()->delete();
+            $card->third()->delete();
             $card->deleteOrFail();
         } catch (Exception $e){
             return redirect()->back()->withErrors($e->getMessage());
