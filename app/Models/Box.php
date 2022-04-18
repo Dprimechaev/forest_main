@@ -15,4 +15,24 @@ class Box extends Model
         'title',
         'user_id'
     ];
+
+    public function card()
+    {
+        return $this->hasMany(Card::class);
+    }
+
+    public function third()
+    {
+        return $this->hasOneThrough(Third::class, Card::class);
+    }
+
+    public function second()
+    {
+        return $this->hasManyThrough(Second::class, Card::class);
+    }
+
+    public function first()
+    {
+        return $this->hasOneThrough(First::class, Card::class);
+    }
 }

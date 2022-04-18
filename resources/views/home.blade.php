@@ -1,12 +1,6 @@
 @extends('layouts.layout')
 @section('title', 'Главная' )
 @section('content')
-{{--    <form action="{{ route('box.store') }}" method="post">--}}
-{{--        @csrf--}}
-{{--        <input type="text" name="title">Введите название--}}
-{{--        <button type="submit" class="btn btn-primary" style="background-color: #277648" >Создать БД</button>--}}
-{{--    </form>--}}
-
 <div class="row">
     <div class="col-4">
         <form action="{{route('box.store')}}" method="post">
@@ -20,8 +14,14 @@
     </div>
 </div>
 
-@if($errors->any())
-    <h4>{{$errors}}</h4>
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
 @endif
 
 <table class="table mt-5">
@@ -34,7 +34,6 @@
     </thead>
     <tbody>
     @foreach($boxes as $box)
-
         <tr>
             <td>
                 {{ $box->title }}
@@ -43,12 +42,14 @@
                 <a class="mt-3 btn btn-success" href="{{ route('box.show', $box) }}">Перейти</a>
             </td>
             <td>
-                <a class="mt-3 btn btn-danger" href="{{ route('box.show', $box) }}">Удалить</a>
+                <form action="{{ route('box.destroy', $box) }}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="mt-3 btn btn-danger">Удалить</button>
+                </form>
             </td>
         </tr>
-
     @endforeach
-
     </tbody>
 </table>
 
