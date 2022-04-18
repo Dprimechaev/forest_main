@@ -38,7 +38,12 @@
                 <a href="" class="btn btn-warning">Редактировать</a>
             </td>
             <td>
-                <a href="" class="btn btn-danger">Удалить</a>
+                <form action="{{ route('card.destroy', $card)}}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger">Удалить</button>
+                </form>
+
             </td>
         </tr>
         @endforeach
@@ -290,6 +295,7 @@
                                     <th scope="col">№</th>
                                     <th scope="col">Ярус</th>
                                     <th scope="col">Состав</th>
+                                    <th scope="col">Порода</th>
                                     <th scope="col">А, лет</th>
                                     <th scope="col">H, м</th>
                                     <th scope="col">Д, см</th>
@@ -304,34 +310,37 @@
                                 <tr>
                                     <th>1</th>
                                     <td>
-                                        <input type="text" style="width:60px; height: 24px" value="0">
+                                        <input type="text" style="width:60px; height: 24px" value="0" name="tier">
                                     </td>
                                     <td>
-                                        <input type="text" style="width:60px; height: 24px" value="0">
+                                        <input type="text" style="width:60px; height: 24px" value="0" name="coefComposition">
                                     </td>
                                     <td>
-                                        <input type="text" style="width:60px; height: 24px" value="0">
+                                        <input type="text" style="width:60px; height: 24px" value="0" name="speciesComposition">
                                     </td>
                                     <td>
-                                        <input type="text" style="width:60px; height: 24px" value="0">
+                                        <input type="text" style="width:60px; height: 24px" value="0" name="origin">
                                     </td>
                                     <td>
-                                        <input type="text" style="width:60px; height: 24px" value="0">
+                                        <input type="number" style="width:60px; height: 24px" value="0" name="age">
                                     </td>
                                     <td>
-                                        <input type="text" style="width:60px; height: 24px" value="0">
+                                        <input type="number" style="width:60px; height: 24px" value="0" name="height">
                                     </td>
                                     <td>
-                                        <input type="text" style="width:60px; height: 24px" value="0">
+                                        <input type="number" style="width:60px; height: 24px" value="0" name="diameter">
                                     </td>
                                     <td>
-                                        <input type="text" style="width:60px; height: 24px" value="0">
+                                        <input type="number" style="width:60px; height: 24px" value="0" name="class">
                                     </td>
                                     <td>
-                                        <input type="text" style="width:60px; height: 24px" value="0">
+                                        <input type="number" style="width:60px; height: 24px" value="0" name="density">
                                     </td>
                                     <td>
-                                        <input type="text" style="width:60px; height: 24px" value="0">
+                                        <input type="number" style="width:60px; height: 24px" value="0" name="g">
+                                    </td>
+                                    <td>
+                                        <input type="number" disabled>
                                     </td>
                                 </tr>
                                 </tbody>

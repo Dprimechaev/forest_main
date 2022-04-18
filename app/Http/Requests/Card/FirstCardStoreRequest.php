@@ -4,7 +4,7 @@ namespace App\Http\Requests\Card;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CardRequest extends FormRequest
+class FirstCardStoreRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -60,7 +60,7 @@ class CardRequest extends FormRequest
             'pineStump' => '', // пней сосны
             'stumpDiameter' => '', // Диаметр пней
             'cutType' => '', // тип рубки
-            'littering' => 'required', // захламление
+            'littering' => '', // захламление
             'liquid' => '', // ликвидная древесина
             'deadwood' => '', // сухостой
         ];
