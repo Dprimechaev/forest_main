@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Box;
 use App\Models\Card;
+use Auth;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
@@ -12,7 +15,7 @@ class BoxController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
@@ -22,7 +25,7 @@ class BoxController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
@@ -32,8 +35,8 @@ class BoxController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return Response
      */
     public function store(Request $request)
     {
@@ -44,7 +47,7 @@ class BoxController extends Controller
         } else {
             $input = $request->all();
             unset($input['_token']);
-            $input['user_id'] = \Auth::id();
+            $input['user_id'] = Auth::id();
             $box = Box::create($input);
             return redirect()->back()->with('succes', 'БД успешно создана');
         }
@@ -53,7 +56,7 @@ class BoxController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function show(Box $box, Request $request)
     {
@@ -65,7 +68,7 @@ class BoxController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function edit($id)
     {
@@ -75,9 +78,9 @@ class BoxController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param Request $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function update(Request $request, $id)
     {
@@ -87,11 +90,16 @@ class BoxController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Box $box
+     * @return RedirectResponse
      */
-    public function destroy($id)
+    public function destroy(Box $box): RedirectResponse
     {
-        //
+        $box->third()->delete();
+        $box->second()->delete();
+        $box->first()->delete();
+        $box->card()->delete();
+        $box->delete();
+        return redirect()->back();
     }
 }

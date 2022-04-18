@@ -34,7 +34,6 @@
     </thead>
     <tbody>
     @foreach($boxes as $box)
-
         <tr>
             <td>
                 {{ $box->title }}
@@ -43,12 +42,14 @@
                 <a class="mt-3 btn btn-success" href="{{ route('box.show', $box) }}">Перейти</a>
             </td>
             <td>
-                <a class="mt-3 btn btn-danger" href="{{ route('box.show', $box) }}">Удалить</a>
+                <form action="{{ route('box.destroy', $box) }}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="mt-3 btn btn-danger">Удалить</button>
+                </form>
             </td>
         </tr>
-
     @endforeach
-
     </tbody>
 </table>
 
