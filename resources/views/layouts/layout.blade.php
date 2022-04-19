@@ -12,6 +12,12 @@
     <link rel="stylesheet" href="{{ asset('plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
     <link rel="stylesheet" href="{{ asset('plugins/daterangepicker/daterangepicker.css') }}">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+{{--    <script src="../../js/jquery-3.6.0.min.js" type="text/javascript"></script>--}}
+{{--    <script src="../../assets/js/main.js" type="text/javascript"></script>--}}
+{{--    <script src="resources/js/jquery-3.6.0.min.js"></script>--}}
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">

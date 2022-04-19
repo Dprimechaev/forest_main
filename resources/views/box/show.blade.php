@@ -75,7 +75,7 @@
                                 <tbody>
                                 <tr>
                                     <th>
-                                        <select class="form-select" name="republic" aria-label="Пример выбора по умолчанию">
+                                        <select class="form-select" name="republic" aria-label="Пример выбора по умолчанию" id="republic">
                                             <option selected>0-нет</option>
                                             <option value="1">Один</option>
                                             <option value="2">Два</option>
@@ -289,7 +289,7 @@
                                 </tr>
                                 </tbody>
                             </table>
-                            <table class="table" border="2px solid">
+                            <table class="table second" border="2px solid">
                                 <thead>
                                 <tr>
                                     <th scope="col">№</th>
@@ -306,42 +306,43 @@
                                     <th scope="col">Запас, м куб</th>
                                 </tr>
                                 </thead>
-                                <tbody>
-                                <tr>
-                                    <th>1</th>
-                                    <td>
+                                <tbody id="tierBody">
+                                <tr id="tier">
+                                    <th id="tierId" class="tierCopy">1</th>
+                                    <td class="tierCopy">
                                         <input type="text" style="width:60px; height: 24px" value="0" name="tier">
                                     </td>
-                                    <td>
+                                    <td class="tierCopy">
                                         <input type="text" style="width:60px; height: 24px" value="0" name="coefComposition">
                                     </td>
-                                    <td>
+                                    <td class="tierCopy">
                                         <input type="text" style="width:60px; height: 24px" value="0" name="speciesComposition">
                                     </td>
-                                    <td>
+                                    <td class="tierCopy">
                                         <input type="text" style="width:60px; height: 24px" value="0" name="origin">
                                     </td>
-                                    <td>
+                                    <td class="tierCopy">
                                         <input type="number" style="width:60px; height: 24px" value="0" name="age">
                                     </td>
-                                    <td>
+                                    <td class="tierCopy">
                                         <input type="number" style="width:60px; height: 24px" value="0" name="height">
                                     </td>
-                                    <td>
+                                    <td class="tierCopy">
                                         <input type="number" style="width:60px; height: 24px" value="0" name="diameter">
                                     </td>
-                                    <td>
+                                    <td class="tierCopy">
                                         <input type="number" style="width:60px; height: 24px" value="0" name="class">
                                     </td>
-                                    <td>
+                                    <td class="tierCopy">
                                         <input type="number" style="width:60px; height: 24px" value="0" name="density">
                                     </td>
-                                    <td>
+                                    <td class="tierCopy">
                                         <input type="number" style="width:60px; height: 24px" value="0" name="g">
                                     </td>
-                                    <td>
+                                    <td class="tierCopy">
                                         <input type="number" disabled>
                                     </td>
+                                    <a href="#" id="addTier">Добавить</a>
                                 </tr>
                                 </tbody>
                             </table>

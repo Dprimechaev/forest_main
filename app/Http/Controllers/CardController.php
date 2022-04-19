@@ -23,12 +23,12 @@ class CardController extends Controller
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
-     */
+//    /**
+//     * Store a newly created resource in storage.
+//     *
+//     * @param  \Illuminate\Http\Request  $request
+//     * @return \Illuminate\Http\RedirectResponse
+//     */
     public function store(FirstCardStoreRequest $cardRequest, SecondCardStoreRequest $secondCardStoreRequest,
                           ThirdCardStoreRequest $thirdCardStoreRequest, Box $box)
     {
