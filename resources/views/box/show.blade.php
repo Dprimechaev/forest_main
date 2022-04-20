@@ -60,290 +60,310 @@
                             <h5 class="modal-title" id="exampleModalLabel">Карточка Таксации</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
                         </div>
-                        <div class="modal-body" border="1px solid">
-                            <table class="table" border="2px solid">
+                        <div class="modal-body">
+                            <table class="table table-sm table-bordered border-dark">
                                 <thead>
                                 <tr>
-                                    <th scope="col">Область, Край, Республика</th>
-                                    <th scope="col">Районное Лестничество</th>
-                                    <th scope="col">Участковое Лестничество</th>
-                                    <th scope="col">Квартал</th>
-                                    <th scope="col">Расстояние вывозки</th>
-                                    <th scope="col">Арендатор</th>
+                                    <th class="th_color">Область, Край, Республика</th>
+                                    <th class="th_color">Районное лестничество</th>
+                                    <th class="th_color">Участковое лестничество</th>
+                                    <th class="th_color">Квартал</th>
+                                    <th class="th_color">Расстояние вывозки</th>
+                                    <th class="th_color">Арендатор</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <th>
-                                        <select class="form-select" name="republic" aria-label="Пример выбора по умолчанию" id="republic">
-                                            <option selected>0-нет</option>
-                                            <option value="1">Один</option>
-                                            <option value="2">Два</option>
-                                            <option value="3">Три</option>
+                                    <td class="td_color">
+                                        <select>
+                                            <option value="0">0 - нет</option>
                                         </select>
-                                    </th>
-                                    <th>
-                                        <select class="form-select" name="district" aria-label="Пример выбора по умолчанию">
-                                            <option selected>0-нет</option>
-                                            <option value="1">Один</option>
-                                            <option value="2">Два</option>
-                                            <option value="3">Три</option>
+                                    </td>
+                                    <td class="td_color">
+                                        <select>
+                                            <option value="0">0 - нет</option>
                                         </select>
-                                    </th>
-                                    <th>
-                                        <select class="form-select" name="region" aria-label="Пример выбора по умолчанию">
-                                            <option selected>0-нет</option>
-                                            <option value="1">Один</option>
-                                            <option value="2">Два</option>
-                                            <option value="3">Три</option>
+                                    </td>
+                                    <td class="td_color">
+                                        <select>
+                                            <option value="0">0 - нет</option>
                                         </select>
-                                    </th>
-                                    <th>
-                                        <input type="text" name="quarter" style="width:60px; height: 24px" value="0">
-                                    </th>
-                                    <th>
-                                        <input type="text" name="distance" style="width:60px; height: 24px" value="0">
-                                    </th>
-                                    <th>
-                                        <select class="form-select" name="renter" aria-label="Пример выбора по умолчанию">
-                                            <option selected>0-нет</option>
-                                            <option value="1">Один</option>
-                                            <option value="2">Два</option>
-                                            <option value="3">Три</option>
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="text" value="0">
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="text" value="0">
+                                    </td>
+                                    <td class="td_color">
+                                        <select>
+                                            <option value="0">0 - нет</option>
                                         </select>
-                                    </th>
+                                    </td>
                                 </tr>
                                 </tbody>
                             </table>
-                            <table class="table" border="2px solid">
+                            <table class="table table-sm table-bordered border-dark">
                                 <thead>
                                 <tr>
-                                    <th scope="col">Номер выдела</th>
-                                    <th scope="col">Площадь<br> выд. га</th>
-                                    <th scope="col">Катег<br> земель</th>
-                                    <th scope="col">Катег защ</th>
-                                    <th scope="col">Способ рубки</th>
-                                    <th scope="col">ОЗУ</th>
-                                    <th scope="col">H<br> у.м.</th>
-                                    <th scope="col">Экс<br>позиция</th>
-                                    <th scope="col">Кру<br>тизна</th>
-                                    <th scope="col-2">Эрозия<br><div class="row">Вид, Степень</div></th>
+                                    <th class="th_color">Номер выдела</th>
+                                    <th class="th_color">Площ. выд, га</th>
+                                    <th class="th_color">Катег. земель</th>
+                                    <th class="th_color">Катег. защитности</th>
+                                    <th class="th_color">Способ рубки</th>
+                                    <th class="th_color">ОЗУ</th>
+                                    <th class="th_color">H, у.м</th>
+                                    <th class="th_color">Экспозиция</th>
+                                    <th class="th_color">Круизна</th>
+                                    <th class="th_color">Эрозия Вид, Степень</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <th>
-                                        <input type="text" name="number" style="width:60px; height: 24px" value="0">
-                                    </th>
-                                    <th>
-                                        <input type="text" name="area" style="width:60px; height: 24px" value="0">
-                                    </th>
-                                    <th>
-                                        <select class="form-select" name="earthCategory" aria-label="Пример выбора по умолчанию">
-                                            <option selected>0-нет</option>
-                                            <option value="1">Один</option>
-                                            <option value="2">Два</option>
-                                            <option value="3">Три</option>
+                                    <td class="td_color">
+                                        <input type="text" value="0">
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="text" value="0">
+                                    </td>
+                                    <td class="td_color">
+                                        <select>
+                                            <option value="0">0 - нет</option>
                                         </select>
-                                    </th>
-                                    <th>
-                                        <select class="form-select" name="protectionCategory" aria-label="Пример выбора по умолчанию">
-                                            <option selected>0-нет</option>
-                                            <option value="1">Один</option>
-                                            <option value="2">Два</option>
-                                            <option value="3">Три</option>
+                                    </td>
+                                    <td class="td_color">
+                                        <select>
+                                            <option value="0">0 - нет</option>
                                         </select>
-                                    </th>
-                                    <th>
-                                        <select class="form-select" name="cutWay" aria-label="Пример выбора по умолчанию">
-                                            <option selected>0-нет</option>
-                                            <option value="1">Один</option>
-                                            <option value="2">Два</option>
-                                            <option value="3">Три</option>
+                                    </td>
+                                    <td class="td_color">
+                                        <select>
+                                            <option value="0">0 - нет</option>
                                         </select>
-                                    </th>
-                                    <th>
-                                        <select class="form-select" name="ozu" aria-label="Пример выбора по умолчанию">
-                                            <option selected>0-нет</option>
-                                            <option value="1">Один</option>
-                                            <option value="2">Два</option>
-                                            <option value="3">Три</option>
                                         </select>
-                                    </th>
-                                    <th>
-                                        <input type="text" name="height" style="width:60px; height: 24px" value="0">
-                                    </th>
-                                    <th>
-                                        <select class="form-select" name="exposition" aria-label="Пример выбора по умолчанию">
-                                            <option selected>0-нет</option>
-                                            <option value="1">Один</option>
-                                            <option value="2">Два</option>
-                                            <option value="3">Три</option>
+                                    </td>
+                                    <td class="td_color">
+                                        <select>
+                                            <option value="0">0 - нет</option>
                                         </select>
-                                    </th>
-                                    <th>
-                                        <input type="text" name="slope" style="width:60px; height: 24px" value="0">
-                                    </th>
-                                    <th class="row">
-                                        <select class="form-select" name="erozionForm" aria-label="Пример выбора по умолчанию">
-                                            <option selected>0-нет</option>
-                                            <option value="1">Один</option>
-                                            <option value="2">Два</option>
-                                            <option value="3">Три</option>
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="text" value="0">
+                                    </td>
+                                    <td class="td_color">
+                                        <select>
+                                            <option value="0">0 - нет</option>
                                         </select>
-                                        <select class="form-select" name="erozionDegree" aria-label="Пример выбора по умолчанию">
-                                            <option selected>0-нет</option>
-                                            <option value="1">Один</option>
-                                            <option value="2">Два</option>
-                                            <option value="3">Три</option>
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="text" value="0">
+                                    </td>
+                                    <td class="td_color">
+                                        <select>
+                                            <option value="0">0 - нет</option>
                                         </select>
-                                    </th>
+                                        <select>
+                                            <option value="0">0 - нет</option>
+                                        </select>
+                                    </td>
                                 </tr>
                                 </tbody>
                             </table>
-                            <table class="table" border="2px solid">
+                            <table class="table table-sm table-bordered border-dark">
                                 <thead>
                                 <tr>
-                                    <th scope="col">Мероприятия</th>
-                                    <th scope="col">Первое</th>
-                                    <th scope="col">% Выбор</th>
-                                    <th scope="col">№ РТК</th>
-                                    <th scope="col">Второе</th>
-                                    <th scope="col">№ РТК</th>
-                                    <th scope="col">Третье</th>
-                                    <th scope="col">№ РТК</th>
-                                    <th scope="col">Цел. пор.</th>
+                                    <th class="th_color">Мероприятия</th>
+                                    <th class="th_color">Первое</th>
+                                    <th class="th_color">% выбор</th>
+                                    <th class="th_color">№ РТК</th>
+                                    <th class="th_color">Второе</th>
+                                    <th class="th_color">№ РТК</th>
+                                    <th class="th_color">Третье</th>
+                                    <th class="th_color">№ РТК</th>
+                                    <th class="th_color">Цел. пор.</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td></td>
-                                    <td>
-                                        <select class="form-select" name="firstEvent" aria-label="Пример выбора по умолчанию">
-                                            <option selected>0-нет</option>
-                                            <option value="1">Один</option>
-                                            <option value="2">Два</option>
-                                            <option value="3">Три</option>
+                                    <td class="td_color">
+
+                                    </td>
+                                    <td class="td_color">
+                                        <select>
+                                            <option value="0">0 - нет
+                                            </option>
                                         </select>
                                     </td>
-                                    <td>
-                                        <input type="text" name="percent" style="width:60px; height: 24px" value="0">
+                                    <td class="td_color">
+                                        <input type="text" value="0">
                                     </td>
-                                    <td>
-                                        <input type="text" name="firstPtk" style="width:60px; height: 24px" value="0">
+                                    <td class="td_color">
+                                        <input type="text" value="0">
                                     </td>
-                                    <td>
-                                        <select class="form-select" name="secondEvent" aria-label="Пример выбора по умолчанию">
-                                            <option selected>0-нет</option>
-                                            <option value="1">Один</option>
-                                            <option value="2">Два</option>
-                                            <option value="3">Три</option>
+                                    <td class="td_color">
+                                        <select>
+                                            <option value="0">0 - нет</option>
                                         </select>
                                     </td>
-                                    <td>
-                                        <input type="text" name="secondPtk" style="width:60px; height: 24px" value="0">
+                                    <td class="td_color">
+                                        <input type="text" value="0">
                                     </td>
-                                    <td>
-                                        <select class="form-select" name="thirdEvent" aria-label="Пример выбора по умолчанию">
-                                            <option selected>0-нет</option>
-                                            <option value="1">Один</option>
-                                            <option value="2">Два</option>
-                                            <option value="3">Три</option>
+                                    <td class="td_color">
+                                        <select>
+                                            <option value="0">0 - нет</option>
                                         </select>
                                     </td>
-                                    <td>
-                                        <input type="text" name="thirdPtk" style="width:60px; height: 24px" value="0">
+                                    <td class="td_color">
+                                        <input type="text" value="0">
                                     </td>
-                                    <td>
-                                        <select class="form-select" name="target" aria-label="Пример выбора по умолчанию">
-                                            <option selected>0-нет</option>
-                                            <option value="1">Один</option>
-                                            <option value="2">Два</option>
-                                            <option value="3">Три</option>
+                                    <td class="td_color">
+                                        <select>
+                                            <option value="0">0 - нет</option>
                                         </select>
                                     </td>
                                 </tr>
                                 </tbody>
                             </table>
-                            <table class="table" border="2px solid">
-                                <tbody>
-                                <tr>
-                                    <th>
-                                        Захламленность, м^3 га
-                                    </th>
-                                    <td>
-                                        <input type="littering" style="width:60px; height: 24px" value="0">
-                                    </td>
-                                    <th>
-                                        В том числе ликвидной
-                                    </th>
-                                    <td>
-                                        <input type="liquid" style="width:60px; height: 24px" value="0">
-                                    </td>
-                                    <th>
-                                        Сухостой м^3 га
-                                    </th>
-                                    <td>
-                                        <input type="deadwood" style="width:60px; height: 24px" value="0">
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <table class="table second" border="2px solid">
+                            <table class="table table-sm table-bordered border-dark">
                                 <thead>
                                 <tr>
-                                    <th scope="col">№</th>
-                                    <th scope="col">Ярус</th>
-                                    <th scope="col">Состав</th>
-                                    <th scope="col">Порода</th>
-                                    <th scope="col">А, лет</th>
-                                    <th scope="col">H, м</th>
-                                    <th scope="col">Д, см</th>
-                                    <th scope="col">Класс товарн</th>
-                                    <th scope="col">Происх</th>
-                                    <th scope="col">P относ</th>
-                                    <th scope="col">G</th>
-                                    <th scope="col">Запас, м куб</th>
+                                    <th class="th_color">Преобл.<br>порода</th>
+                                    <th class="th_color">Класс <br>бонитета</th>
+                                    <th class="th_color">Тип леса</th>
+                                    <th class="th_color">ТЛУ</th>
+                                    <th class="th_color">Кл. пожар.<br>опасности</th>
+                                    <th class="th_color">Год <br>рубки</th>
+                                    <th class="th_color">Пни (шт/га)<br>Всего Сосны</th>
+                                    <th class="th_color">Д пней, см.</th>
+                                    <th class="th_color">Тип<br>вырубки</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="td_color">
+                                        <select>
+                                            <option value="0">0 - нет</option>
+                                        </select>
+                                    </td>
+                                    <td class="td_color">
+                                        <select>
+                                            <option value="0">0 - нет</option>
+                                        </select>
+                                    </td>
+                                    <td class="td_color">
+                                        <select>
+                                            <option value="0">0 - нет</option>
+                                        </select>
+                                    </td>
+                                    <td class="td_color">
+                                        <select>
+                                            <option value="0">0 - нет</option>
+                                        </select>
+                                    </td>
+                                    <td class="td_color">
+                                        <select>
+                                            <option value="0">0 - нет</option>
+                                        </select>
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="text" value="0">
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="text" value="0">
+                                        <input type="text" value="0">
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="text" value="0">
+                                    </td>
+                                    <td class="td_color">
+                                        <select>
+                                            <option value="0">0 - нет</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <table class="table table-sm table-bordered border-dark">
+                                <thead>
+                                <tr>
+                                    <th class="th_color">Захлам, м^3/га</th>
+                                    <th class="th_color">
+                                        <input type="text" value="0">
+                                    </th>
+                                    <th class="th_color">В т.ч. ликвид</th>
+                                    <th class="th_color">
+                                        <input type="text" value="0">
+                                    </th>
+                                    <th class="th_color">Сухостой, м^3/га</th>
+                                    <th class="th_color">
+                                        <input type="text" value="0">
+                                    </th>
+                                </tr>
+                                </thead>
+                            </table>
+                            <table class="table table-sm table-bordered border-dark">
+                                <thead>
+                                <tr>
+                                    <th class="th_color">№</th>
+                                    <th class="th_color">Ярус</th>
+                                    <th class="th_color">Состав<br>Коэфф Порода</th>
+                                    <th class="th_color">А, лет</th>
+                                    <th class="th_color">H, м</th>
+                                    <th class="th_color">Д, см</th>
+                                    <th class="th_color">Класс<br>товарн.</th>
+                                    <th class="th_color">Происх.</th>
+                                    <th class="th_color">P относ.</th>
+                                    <th class="th_color">G</th>
+                                    <th class="th_color">Запас,<br>м. куб.</th>
                                 </tr>
                                 </thead>
                                 <tbody id="tierBody">
-                                <tr id="tier">
-                                    <th id="tierId" class="tierCopy">1</th>
-                                    <td class="tierCopy">
-                                        <input type="text" style="width:60px; height: 24px" value="0" name="tier">
+                                <tr>
+                                    <td class="td_color">
+                                        1
                                     </td>
-                                    <td class="tierCopy">
-                                        <input type="text" style="width:60px; height: 24px" value="0" name="coefComposition">
+                                    <td class="td_color">
+                                        <select>
+                                            <option value="">0 - нет</option>
+                                        </select>
                                     </td>
-                                    <td class="tierCopy">
-                                        <input type="text" style="width:60px; height: 24px" value="0" name="speciesComposition">
+                                    <td class="td_color">
+                                        <select>
+                                            <option value="0">0 - нет</option>
+                                        </select>
+                                        <select>
+                                            <option value="0">0 - нет</option>
+                                        </select>
                                     </td>
-                                    <td class="tierCopy">
-                                        <input type="text" style="width:60px; height: 24px" value="0" name="origin">
+                                    <td class="td_color">
+                                        <input type="text" value="0">
                                     </td>
-                                    <td class="tierCopy">
-                                        <input type="number" style="width:60px; height: 24px" value="0" name="age">
+                                    <td class="td_color">
+                                        <input type="text" value="0">
                                     </td>
-                                    <td class="tierCopy">
-                                        <input type="number" style="width:60px; height: 24px" value="0" name="height">
+                                    <td class="td_color">
+                                        <input type="text" value="0">
                                     </td>
-                                    <td class="tierCopy">
-                                        <input type="number" style="width:60px; height: 24px" value="0" name="diameter">
+                                    <td class="td_color">
+                                        <input type="text" value="0">
                                     </td>
-                                    <td class="tierCopy">
-                                        <input type="number" style="width:60px; height: 24px" value="0" name="class">
+                                    <td class="td_color">
+                                        <select>
+                                            <option value="0">0 - нет</option>
+                                        </select>
                                     </td>
-                                    <td class="tierCopy">
-                                        <input type="number" style="width:60px; height: 24px" value="0" name="density">
+                                    <td class="td_color">
+                                        <input type="text" value="0">
                                     </td>
-                                    <td class="tierCopy">
-                                        <input type="number" style="width:60px; height: 24px" value="0" name="g">
+                                    <td class="td_color">
+                                        <input type="text" value="0">
                                     </td>
-                                    <td class="tierCopy">
-                                        <input type="number" disabled>
+                                    <td class="td_color">
+                                        <input type="text" value="0">
                                     </td>
-                                    <a href="#" id="addTier">Добавить</a>
                                 </tr>
+                                <input type="button" class="mb-3 mr-3" style="background-color: #277648; color:white;" onclick="countRabbits()" value="+">
+                                <input type="button" class="mb-3" style="background-color: grey; color:white;" value="-" onclick="minus()">
                                 </tbody>
                             </table>
                         </div>
