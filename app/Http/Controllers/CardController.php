@@ -29,30 +29,30 @@ class CardController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(FirstCardStoreRequest $cardRequest, SecondCardStoreRequest $secondCardStoreRequest,
-                          ThirdCardStoreRequest $thirdCardStoreRequest, Box $box)
-    {
-        try {
-            /*values for first zone*/
-            $firstValidated = $cardRequest->validated();
-            $card = Card::create(['box_id' => $firstValidated['box_id']]);
-            unset($firstValidated['box_id']);
-            $card->first()->create($firstValidated);
-            /*values for second zone*/
-            $secondValidated = $secondCardStoreRequest->validated();
-            $card->second()->create($secondValidated);
-            /*values for second zone*/
-            $thirdValidated = $thirdCardStoreRequest->validated();
-            $card->third()->create($thirdValidated);
-        } catch (Exception $e){
-            return back()->withInput()->withErrors($e->getMessage());
-        }
-        return redirect()->back();
-  }
-//    public function store(Request $request)
+//    public function store(FirstCardStoreRequest $cardRequest, SecondCardStoreRequest $secondCardStoreRequest,
+//                          ThirdCardStoreRequest $thirdCardStoreRequest, Box $box)
 //    {
-//        dd($request->all());
-//    }
+//        try {
+//            /*values for first zone*/
+//            $firstValidated = $cardRequest->validated();
+//            $card = Card::create(['box_id' => $firstValidated['box_id']]);
+//            unset($firstValidated['box_id']);
+//            $card->first()->create($firstValidated);
+//            /*values for second zone*/
+//            $secondValidated = $secondCardStoreRequest->validated();
+//            $card->second()->create($secondValidated);
+//            /*values for second zone*/
+//            $thirdValidated = $thirdCardStoreRequest->validated();
+//            $card->third()->create($thirdValidated);
+//        } catch (Exception $e){
+//            return back()->withInput()->withErrors($e->getMessage());
+//        }
+//        return redirect()->back();
+//  }
+    public function store(Request $request)
+    {
+        dd($request->all());
+    }
 
     /**
      * Display the specified resource.
