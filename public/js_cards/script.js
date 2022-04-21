@@ -5,7 +5,7 @@ function countRabbits() {
         '                                    <td class="td_color">\n' + index +
         '                                    </td>\n' +
         '                                    <td class="td_color">\n' +
-        '                                        <select name="row[\'index\'][\'tier\']">\n' +
+        '                                        <select name="row[\''+index+'\'][\'tier\']">\n' +
         '                                            <option value="0">0 - нет</option>\n' +
         '                                        </select>\n' +
         '                                    </td>\n' +
