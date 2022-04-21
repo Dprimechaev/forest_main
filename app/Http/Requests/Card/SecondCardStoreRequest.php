@@ -24,17 +24,17 @@ class SecondCardStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'tier' => '',
-            'coefComposition' => '',
-            'speciesComposition' => '',
-            'origin' => '',
-            'age' => 'numeric',
-            'height' => 'numeric',
-            'diameter' => 'numeric',
-            'class' => 'numeric',
-            'density' => 'numeric',
-            'g' => 'numeric',
-            'stock' => 'numeric',
+            'row.*.tier' => '',
+            'row.*.coefComposition' => '',
+            'row.*.speciesComposition' => '',
+            'row.*.origin' => '',
+            'row.*.age' => 'numeric',
+            'row.*.height' => 'numeric',
+            'row.*.diameter' => 'numeric',
+            'row.*.class' => 'numeric',
+            'row.*.density' => 'numeric',
+            'row.*.g' => 'numeric',
+            'row.*.stock' => 'numeric',
         ];
     }
 }

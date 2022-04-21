@@ -29,23 +29,23 @@
         </thead>
         <tbody>
         @foreach($cards as $card)
-        <tr>
-            <td>{{$loop->iteration}}</td>
-            <td>{{$card->first->republic}}</td>
-            <td>{{$card->first->region}}</td>
-            <td>{{$card->first->area}}</td>
-            <td>
-                <a href="" class="btn btn-warning">Редактировать</a>
-            </td>
-            <td>
-                <form action="{{ route('card.destroy', $card)}}" method="post">
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit" class="btn btn-danger">Удалить</button>
-                </form>
+            <tr>
+                <td>{{$loop->iteration}}</td>
+                <td>{{$card->first->republic}}</td>
+                <td>{{$card->first->region}}</td>
+                <td>{{$card->first->area}}</td>
+                <td>
+                    <a href="" class="btn btn-warning">Редактировать</a>
+                </td>
+                <td>
+                    <form action="{{ route('card.destroy', $card)}}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Удалить</button>
+                    </form>
 
-            </td>
-        </tr>
+                </td>
+            </tr>
         @endforeach
         </tbody>
     </table>
@@ -75,28 +75,28 @@
                                 <tbody>
                                 <tr>
                                     <td class="td_color">
-                                        <select>
+                                        <select name="republic">
                                             <option value="0">0 - нет</option>
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <select>
+                                        <select name="region">
                                             <option value="0">0 - нет</option>
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <select>
+                                        <select name="district">
                                             <option value="0">0 - нет</option>
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0">
+                                        <input type="text" value="0" name="quarter">
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0">
+                                        <input type="text" value="0" name="distance">
                                     </td>
                                     <td class="td_color">
-                                        <select>
+                                        <select name="renter">
                                             <option value="0">0 - нет</option>
                                         </select>
                                     </td>
@@ -121,48 +121,47 @@
                                 <tbody>
                                 <tr>
                                     <td class="td_color">
-                                        <input type="text" value="0">
+                                        <input type="text" value="0" name="number">
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0">
+                                        <input type="text" value="0" name="area">
                                     </td>
                                     <td class="td_color">
-                                        <select>
+                                        <select name="earthCategory">
                                             <option value="0">0 - нет</option>
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <select>
+                                        <select name="protectionCategory">
                                             <option value="0">0 - нет</option>
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <select>
-                                            <option value="0">0 - нет</option>
-                                        </select>
-                                        </select>
-                                    </td>
-                                    <td class="td_color">
-                                        <select>
+                                        <select name="cutWay">
                                             <option value="0">0 - нет</option>
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0">
-                                    </td>
-                                    <td class="td_color">
-                                        <select>
+                                        <select name="ozu">
                                             <option value="0">0 - нет</option>
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0">
+                                        <input type="number" value="0" name="height">
                                     </td>
                                     <td class="td_color">
-                                        <select>
+                                        <select name="exposition">
                                             <option value="0">0 - нет</option>
                                         </select>
-                                        <select>
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="text" value="0" name="slope">
+                                    </td>
+                                    <td class="td_color">
+                                        <select name="erozionForm">
+                                            <option value="0">0 - нет</option>
+                                        </select>
+                                        <select name="erozionDegree">
                                             <option value="0">0 - нет</option>
                                         </select>
                                     </td>
@@ -189,35 +188,34 @@
 
                                     </td>
                                     <td class="td_color">
-                                        <select>
-                                            <option value="0">0 - нет
-                                            </option>
-                                        </select>
-                                    </td>
-                                    <td class="td_color">
-                                        <input type="text" value="0">
-                                    </td>
-                                    <td class="td_color">
-                                        <input type="text" value="0">
-                                    </td>
-                                    <td class="td_color">
-                                        <select>
+                                        <select name="firstEvent">
                                             <option value="0">0 - нет</option>
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0">
+                                        <input type="text" value="0" name="percent">
                                     </td>
                                     <td class="td_color">
-                                        <select>
+                                        <input type="text" value="0" name="firstPtk">
+                                    </td>
+                                    <td class="td_color">
+                                        <select name="secondEvent">
                                             <option value="0">0 - нет</option>
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0">
+                                        <input type="text" value="0" name="secondPtk">
                                     </td>
                                     <td class="td_color">
-                                        <select>
+                                        <select name="thirdEvent">
+                                            <option value="0">0 - нет</option>
+                                        </select>
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="text" value="0" name="thirdPtk">
+                                    </td>
+                                    <td class="td_color">
+                                        <select name="target">
                                             <option value="0">0 - нет</option>
                                         </select>
                                     </td>
@@ -241,42 +239,42 @@
                                 <tbody>
                                 <tr>
                                     <td class="td_color">
-                                        <select>
+                                        <select name="dominantBreed">
                                             <option value="0">0 - нет</option>
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <select>
+                                        <select name="bonitetClass">
                                             <option value="0">0 - нет</option>
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <select>
+                                        <select name="forestType">
                                             <option value="0">0 - нет</option>
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <select>
+                                        <select name="tlu">
                                             <option value="0">0 - нет</option>
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <select>
+                                        <select name="fireDangeros">
                                             <option value="0">0 - нет</option>
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0">
+                                        <input type="text" value="0" name="cutYear">
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0">
-                                        <input type="text" value="0">
+                                        <input type="text" value="0" name="allStump">
+                                        <input type="text" value="0" name="pineStump">
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0">
+                                        <input type="text" value="0" name="stumpDiameter">
                                     </td>
                                     <td class="td_color">
-                                        <select>
+                                        <select name="cutType">
                                             <option value="0">0 - нет</option>
                                         </select>
                                     </td>
@@ -288,15 +286,15 @@
                                 <tr>
                                     <th class="th_color">Захлам, м^3/га</th>
                                     <th class="th_color">
-                                        <input type="text" value="0">
+                                        <input type="text" value="0" name="littering">
                                     </th>
                                     <th class="th_color">В т.ч. ликвид</th>
                                     <th class="th_color">
-                                        <input type="text" value="0">
+                                        <input type="text" value="0" name="liquid">
                                     </th>
                                     <th class="th_color">Сухостой, м^3/га</th>
                                     <th class="th_color">
-                                        <input type="text" value="0">
+                                        <input type="text" value="0" name="deadwood">
                                     </th>
                                 </tr>
                                 </thead>
@@ -320,46 +318,46 @@
                                 <tbody id="tierBody">
                                 <tr>
                                     <td class="td_color">
-                                        1
+                                        {{ $index = 1 }}
                                     </td>
                                     <td class="td_color">
-                                        <select>
-                                            <option value="">0 - нет</option>
+                                        <select name="row['{{ $index }}']['tier]">
+                                            <option value="0" >0</option>
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <select>
+                                        <select name="row['{{ $index }}']['coefComposition]">
                                             <option value="0">0 - нет</option>
                                         </select>
-                                        <select>
-                                            <option value="0">0 - нет</option>
-                                        </select>
-                                    </td>
-                                    <td class="td_color">
-                                        <input type="text" value="0">
-                                    </td>
-                                    <td class="td_color">
-                                        <input type="text" value="0">
-                                    </td>
-                                    <td class="td_color">
-                                        <input type="text" value="0">
-                                    </td>
-                                    <td class="td_color">
-                                        <input type="text" value="0">
-                                    </td>
-                                    <td class="td_color">
-                                        <select>
+                                        <select name="row['{{ $index }}']['speciesComposition]">
                                             <option value="0">0 - нет</option>
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0">
+                                        <input type="text" value="0" name="row['{{ $index }}']['origin]">
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0">
+                                        <input type="text" value="0" name="row['{{ $index }}']['age]">
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0">
+                                        <input type="number" value="0" name="row['{{ $index }}']['height]">
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="text" value="0" name="row['{{ $index }}']['diameter]">
+                                    </td>
+                                    <td class="td_color">
+                                        <select name="row['{{ $index }}']['class]">
+                                            <option value="0">0 - нет</option>
+                                        </select>
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="text" value="0" name="row['{{ $index }}']['density]">
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="text" value="0" name="row['{{ $index }}']['g]">
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="text" value="0" name="row['{{ $index }}']['stock]">
                                     </td>
                                 </tr>
                                 <input type="button" class="mb-3 mr-3" style="background-color: #277648; color:white;" onclick="countRabbits()" value="+">

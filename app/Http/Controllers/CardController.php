@@ -23,12 +23,12 @@ class CardController extends Controller
         //
     }
 
-//    /**
-//     * Store a newly created resource in storage.
-//     *
-//     * @param  \Illuminate\Http\Request  $request
-//     * @return \Illuminate\Http\RedirectResponse
-//     */
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function store(FirstCardStoreRequest $cardRequest, SecondCardStoreRequest $secondCardStoreRequest,
                           ThirdCardStoreRequest $thirdCardStoreRequest, Box $box)
     {
@@ -48,8 +48,11 @@ class CardController extends Controller
             return back()->withInput()->withErrors($e->getMessage());
         }
         return redirect()->back();
-
-    }
+  }
+//    public function store(Request $request)
+//    {
+//        dd($request->all());
+//    }
 
     /**
      * Display the specified resource.
