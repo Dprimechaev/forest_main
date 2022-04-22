@@ -7,6 +7,7 @@ use App\Http\Requests\Card\SecondCardStoreRequest;
 use App\Http\Requests\Card\ThirdCardStoreRequest;
 use App\Models\Box;
 use App\Models\Card;
+use App\Models\Second;
 use Illuminate\Http\Request;
 use PHPUnit\Exception;
 use Symfony\Component\Console\Input\Input;
@@ -29,30 +30,34 @@ class CardController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\RedirectResponse
      */
-//    public function store(FirstCardStoreRequest $cardRequest, SecondCardStoreRequest $secondCardStoreRequest,
-//                          ThirdCardStoreRequest $thirdCardStoreRequest, Box $box)
-//    {
-//        try {
-//            /*values for first zone*/
-//            $firstValidated = $cardRequest->validated();
-//            $card = Card::create(['box_id' => $firstValidated['box_id']]);
-//            unset($firstValidated['box_id']);
-//            $card->first()->create($firstValidated);
-//            /*values for second zone*/
-//            $secondValidated = $secondCardStoreRequest->validated();
-//            $card->second()->create($secondValidated);
-//            /*values for second zone*/
-//            $thirdValidated = $thirdCardStoreRequest->validated();
-//            $card->third()->create($thirdValidated);
-//        } catch (Exception $e){
-//            return back()->withInput()->withErrors($e->getMessage());
-//        }
-//        return redirect()->back();
-//  }
-    public function store(Request $request)
+    public function store(FirstCardStoreRequest $cardRequest, SecondCardStoreRequest $secondCardStoreRequest,
+                          ThirdCardStoreRequest $thirdCardStoreRequest, Box $box)
     {
-        dd($request->all());
-    }
+        try {
+//            dd($secondCardStoreRequest->all());
+            /*values for first zone*/
+            $firstValidated = $cardRequest->validated();
+            $card = Card::create(['box_id' => $firstValidated['box_id']]);
+            unset($firstValidated['box_id']);
+            $card->first()->create($firstValidated);
+            /*values for second zone*/
+            $secondValidated = $secondCardStoreRequest->validated();
+            $rows = $secondCardStoreRequest->row;
+            $rows[1]['card_id'] = 1;
+            $rows[2]['card_id'] = 1;
+            foreach ($rows as $key => $value)
+            {
+                Second::create([$rows[$key]]);
+//                $card->second()->create([$row]);
+            }
+            /*values for third zone*/
+            $thirdValidated = $thirdCardStoreRequest->validated();
+            $card->third()->create($thirdValidated);
+        } catch (Exception $e){
+            return back()->withInput()->withErrors($e->getMessage());
+        }
+        return redirect()->back();
+  }
 
     /**
      * Display the specified resource.

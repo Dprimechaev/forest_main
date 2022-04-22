@@ -24,6 +24,7 @@ class SecondCardStoreRequest extends FormRequest
     public function rules()
     {
         return [
+            'card_id' => '',
             'row.*.tier' => '',
             'row.*.coefComposition' => '',
             'row.*.speciesComposition' => '',

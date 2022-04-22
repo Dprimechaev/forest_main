@@ -24,6 +24,7 @@ class FirstCardStoreRequest extends FormRequest
     public function rules()
     {
         return [
+            'card_id' => '',//
             'box_id' => 'required', //+
             'republic' => 'required', //+ республика
             'region' => 'required', //+ район

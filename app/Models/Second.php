@@ -23,6 +23,7 @@ class Second extends Model
         'density',
         'g',
         'stock',
+        'card_id'
     ];
 
     public function card()

@@ -321,44 +321,46 @@
                                         {{ $index = 1 }}
                                     </td>
                                     <td class="td_color">
-                                        <select name="row['{{ $index }}']['tier]">
-                                            <option value="0" >0</option>
+                                        <select name="row[{{ $index }}][tier]">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <select name="row['{{ $index }}']['coefComposition]">
+                                        <select name="row[{{ $index }}][coefComposition]">
                                             <option value="0">0 - нет</option>
                                         </select>
-                                        <select name="row['{{ $index }}']['speciesComposition]">
-                                            <option value="0">0 - нет</option>
-                                        </select>
-                                    </td>
-                                    <td class="td_color">
-                                        <input type="text" value="0" name="row['{{ $index }}']['origin]">
-                                    </td>
-                                    <td class="td_color">
-                                        <input type="text" value="0" name="row['{{ $index }}']['age]">
-                                    </td>
-                                    <td class="td_color">
-                                        <input type="number" value="0" name="row['{{ $index }}']['height]">
-                                    </td>
-                                    <td class="td_color">
-                                        <input type="text" value="0" name="row['{{ $index }}']['diameter]">
-                                    </td>
-                                    <td class="td_color">
-                                        <select name="row['{{ $index }}']['class]">
+                                        <select name="row[{{ $index }}][speciesComposition]">
                                             <option value="0">0 - нет</option>
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0" name="row['{{ $index }}']['density]">
+                                        <input type="text" value="0" name="row[{{ $index }}][origin]">
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0" name="row['{{ $index }}']['g]">
+                                        <input type="number" value="0" name="row[{{ $index }}][age]">
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0" name="row['{{ $index }}']['stock]">
+                                        <input type="number" value="0" name="row[{{ $index }}][height]">
                                     </td>
+                                    <td class="td_color">
+                                        <input type="number" value="0" name="row[{{ $index }}][diameter]">
+                                    </td>
+                                    <td class="td_color">
+                                        <select name="row[{{ $index }}][class]">
+                                            <option value="0">0 - нет</option>
+                                        </select>
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="number" value="0" name="row[{{ $index }}][g]">
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="number" value="0" name="row[{{ $index }}][stock]">
+                                    </td>
+                                    <input type="number" value="1" name="card_id" disabled>
                                 </tr>
                                 <input type="button" class="mb-3 mr-3" style="background-color: #277648; color:white;" onclick="countRabbits()" value="+">
                                 <input type="button" class="mb-3" style="background-color: grey; color:white;" value="-" onclick="minus()">
