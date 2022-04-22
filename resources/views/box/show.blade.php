@@ -360,7 +360,6 @@
                                     <td class="td_color">
                                         <input type="number" value="0" name="row[{{ $index }}][stock]">
                                     </td>
-                                    <input type="number" value="1" name="card_id" disabled>
                                 </tr>
                                 <input type="button" class="mb-3 mr-3" style="background-color: #277648; color:white;" onclick="countRabbits()" value="+">
                                 <input type="button" class="mb-3" style="background-color: grey; color:white;" value="-" onclick="minus()">

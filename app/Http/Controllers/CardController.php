@@ -34,7 +34,7 @@ class CardController extends Controller
                           ThirdCardStoreRequest $thirdCardStoreRequest, Box $box)
     {
         try {
-//            dd($secondCardStoreRequest->all());
+            //dd($secondCardStoreRequest->all());
             /*values for first zone*/
             $firstValidated = $cardRequest->validated();
             $card = Card::create(['box_id' => $firstValidated['box_id']]);
@@ -43,11 +43,13 @@ class CardController extends Controller
             /*values for second zone*/
             $secondValidated = $secondCardStoreRequest->validated();
             $rows = $secondCardStoreRequest->row;
-            $rows[1]['card_id'] = 1;
-            $rows[2]['card_id'] = 1;
-            foreach ($rows as $key => $value)
+            foreach ($rows as $key => $values)
             {
-                Second::create([$rows[$key]]);
+                $rows[$key]['card_id'] = $card->id;
+            }
+            foreach ($rows as $row)
+            {
+                Second::create($row);
 //                $card->second()->create([$row]);
             }
             /*values for third zone*/
