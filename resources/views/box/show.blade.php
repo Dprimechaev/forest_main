@@ -286,15 +286,15 @@
                                 <tr>
                                     <th class="th_color">Захлам, м^3/га</th>
                                     <th class="th_color">
-                                        <input type="text" value="0" name="littering">
+                                        <input type="number" value="0" name="littering">
                                     </th>
                                     <th class="th_color">В т.ч. ликвид</th>
                                     <th class="th_color">
-                                        <input type="text" value="0" name="liquid">
+                                        <input type="number" value="0" name="liquid">
                                     </th>
                                     <th class="th_color">Сухостой, м^3/га</th>
                                     <th class="th_color">
-                                        <input type="text" value="0" name="deadwood">
+                                        <input type="number" value="0" name="deadwood">
                                     </th>
                                 </tr>
                                 </thead>
@@ -335,9 +335,6 @@
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0" name="row[{{ $index }}][origin]">
-                                    </td>
-                                    <td class="td_color">
                                         <input type="number" value="0" name="row[{{ $index }}][age]">
                                     </td>
                                     <td class="td_color">
@@ -353,6 +350,9 @@
                                     </td>
                                     <td class="td_color">
                                         <input type="number" value="0" name="row[{{ $index }}][density]">
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="text" value="0" name="row[{{ $index }}][origin]">
                                     </td>
                                     <td class="td_color">
                                         <input type="number" value="0" name="row[{{ $index }}][g]">
@@ -401,61 +401,61 @@
                                     <td class="td_color">
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                        <input type="number" value="0" name="thousands">
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                        <input type="number" value="0" name="height">
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                        <input type="number" value="0" name="age">
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                        <input type="number" value="0" name="koefOne">
                                     </td>
                                     <td class="td_color">
-                                        <select name="row[{{ $index }}][class]">
+                                        <select name="podrostOne">
                                             <option value="0">0 - нет</option>
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                        <input type="number" value="0" name="koefTwo">
                                     </td>
                                     <td class="td_color">
-                                        <select name="row[{{ $index }}][class]">
+                                        <select name="podrostTwo">
                                             <option value="0">0 - нет</option>
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                        <input type="number" value="0" name="koefThree">
                                     </td>
                                     <td class="td_color">
-                                        <select name="row[{{ $index }}][class]">
-                                            <option value="0">0 - нет</option>
-                                        </select>
-                                    </td>
-                                    <td class="td_color">
-                                        <select name="row[{{ $index }}][class]">
+                                        <select name="podrostThree">
                                             <option value="0">0 - нет</option>
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <select name="row[{{ $index }}][class]">
+                                        <select name="por">
                                             <option value="0">0 - нет</option>
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <select name="row[{{ $index }}][class]">
+                                        <select name="Oc">
                                             <option value="0">0 - нет</option>
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <select name="row[{{ $index }}][class]">
+                                        <select name="density">
                                             <option value="0">0 - нет</option>
                                         </select>
-                                        <select name="row[{{ $index }}][class]">
+                                    </td>
+                                    <td class="td_color">
+                                        <select name="podlesokOne">
                                             <option value="0">0 - нет</option>
                                         </select>
-                                        <select name="row[{{ $index }}][class]">
+                                        <select name="podlesokTwo">
+                                            <option value="0">0 - нет</option>
+                                        </select>
+                                        <select name="podlesokThree">
                                             <option value="0">0 - нет</option>
                                         </select>
                                     </td>

@@ -8,6 +8,7 @@ use App\Http\Requests\Card\ThirdCardStoreRequest;
 use App\Models\Box;
 use App\Models\Card;
 use App\Models\Second;
+use App\Models\Third;
 use Illuminate\Http\Request;
 use PHPUnit\Exception;
 use Symfony\Component\Console\Input\Input;
@@ -34,7 +35,6 @@ class CardController extends Controller
                           ThirdCardStoreRequest $thirdCardStoreRequest, Box $box)
     {
         try {
-            //dd($secondCardStoreRequest->all());
             /*values for first zone*/
             $firstValidated = $cardRequest->validated();
             $card = Card::create(['box_id' => $firstValidated['box_id']]);
@@ -50,11 +50,11 @@ class CardController extends Controller
             foreach ($rows as $row)
             {
                 Second::create($row);
-//                $card->second()->create([$row]);
             }
             /*values for third zone*/
             $thirdValidated = $thirdCardStoreRequest->validated();
-            $card->third()->create($thirdValidated);
+            $thirdValidated['card_id'] = $card->id;
+            Third::create($thirdValidated);
         } catch (Exception $e){
             return back()->withInput()->withErrors($e->getMessage());
         }
