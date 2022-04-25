@@ -365,6 +365,103 @@
                                 <input type="button" id="clear" class="mb-3" style="background-color: grey; color:white;" value="-">
                                 </tbody>
                             </table>
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th scope="col">ПДР</th>
+                                    <th scope="col">Кол.тыс.</th>
+                                    <th scope="col">H, м</th>
+                                    <th scope="col">А, лет</th>
+                                    <th scope="col">К1</th>
+                                    <th scope="col">Пор.1</th>
+                                    <th scope="col">К2</th>
+                                    <th scope="col">Пор.2</th>
+                                    <th scope="col">К3</th>
+                                    <th scope="col">Пор.3</th>
+                                    <th scope="col">Оценка</th>
+                                    <th scope="col">ПДЛ</th>
+                                    <th scope="col">Густота</th>
+                                    <th scope="col" class="text-center">Породы<br>
+                                        <div class="row">
+                                            <div class="col">
+                                                1
+                                            </div>
+                                            <div class="col">
+                                                2
+                                            </div>
+                                            <div class="col">
+                                                3
+                                            </div>
+                                        </div>
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="td_color">
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                    </td>
+                                    <td class="td_color">
+                                        <select name="row[{{ $index }}][class]">
+                                            <option value="0">0 - нет</option>
+                                        </select>
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                    </td>
+                                    <td class="td_color">
+                                        <select name="row[{{ $index }}][class]">
+                                            <option value="0">0 - нет</option>
+                                        </select>
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                    </td>
+                                    <td class="td_color">
+                                        <select name="row[{{ $index }}][class]">
+                                            <option value="0">0 - нет</option>
+                                        </select>
+                                    </td>
+                                    <td class="td_color">
+                                        <select name="row[{{ $index }}][class]">
+                                            <option value="0">0 - нет</option>
+                                        </select>
+                                    </td>
+                                    <td class="td_color">
+                                        <select name="row[{{ $index }}][class]">
+                                            <option value="0">0 - нет</option>
+                                        </select>
+                                    </td>
+                                    <td class="td_color">
+                                        <select name="row[{{ $index }}][class]">
+                                            <option value="0">0 - нет</option>
+                                        </select>
+                                    </td>
+                                    <td class="td_color">
+                                        <select name="row[{{ $index }}][class]">
+                                            <option value="0">0 - нет</option>
+                                        </select>
+                                        <select name="row[{{ $index }}][class]">
+                                            <option value="0">0 - нет</option>
+                                        </select>
+                                        <select name="row[{{ $index }}][class]">
+                                            <option value="0">0 - нет</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
