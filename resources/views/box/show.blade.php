@@ -362,7 +362,7 @@
                                     </td>
                                 </tr>
                                 <input type="button" class="mb-3 mr-3" style="background-color: #277648; color:white;" onclick="countRabbits()" value="+">
-                                <input type="button" class="mb-3" style="background-color: grey; color:white;" value="-" onclick="minus()">
+                                <input type="button" id="clear" class="mb-3" style="background-color: grey; color:white;" value="-">
                                 </tbody>
                             </table>
                         </div>
