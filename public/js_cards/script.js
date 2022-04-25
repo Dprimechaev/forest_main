@@ -1,7 +1,7 @@
 let index = 1
 function countRabbits() {
     ++index
-    tierBody.insertAdjacentHTML('afterend', '<tr>\n' +
+    tierBody.insertAdjacentHTML('beforeend', '<tr>\n' +
         '                                    <td class="td_color">\n' + index +
         '                                    </td>\n' +
         '                                    <td class="td_color">\n' +
@@ -47,9 +47,14 @@ function countRabbits() {
         '                                </tr>');
 
 }
+let node = document.getElementById('tierBody');
+let button = document.getElementById('clear');
 
-function minus() {
-    tierBody.firstChild.remove();
+button.addEventListener('click', clearFunction);
+
+function clearFunction() {
+    node.removeChild(node.lastChild);
+
 }
 
 
