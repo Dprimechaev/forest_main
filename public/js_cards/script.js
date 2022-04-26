@@ -1,3 +1,4 @@
+//Ярусы добавление
 let index = 1
 function countRabbits() {
     if (index <= 9){
@@ -49,6 +50,8 @@ function countRabbits() {
     }
 
 }
+
+//Ярусы удаление
 let node = document.getElementById('tierBody');
 let button = document.getElementById('clear');
 
@@ -60,8 +63,62 @@ function clearFunction() {
         node.removeChild(node.lastChild);
         index--;
     }
+}
+// МДС добавление
 
+let index_mds = 1
+function countRabbitsMDS() {
+    if (index_mds <= 9){
+        ++index_mds
+        tierMDS.insertAdjacentHTML('beforeend', '<tr>\n' +
+            '                                    <td>\n' +
+            '                                        <select name="row[{{ $index }}][class]">\n' +
+            '                                            <option value="0">0 - нет</option>\n' +
+            '                                        </select>\n' +
+            '                                    </td>\n' +
+            '                                    <td class="td_color">\n' +
+            '                                        <input type="number" value="0" name="row[{{ $index }}][density]">\n' +
+            '                                    </td>\n' +
+            '                                    <td class="td_color">\n' +
+            '                                        <input type="number" value="0" name="row[{{ $index }}][density]">\n' +
+            '                                    </td>\n' +
+            '                                    <td class="td_color">\n' +
+            '                                        <input type="number" value="0" name="row[{{ $index }}][density]">\n' +
+            '                                    </td>\n' +
+            '                                    <td class="td_color">\n' +
+            '                                        <input type="number" value="0" name="row[{{ $index }}][density]">\n' +
+            '                                    </td>\n' +
+            '                                    <td class="td_color">\n' +
+            '                                        <input type="number" value="0" name="row[{{ $index }}][density]">\n' +
+            '                                    </td>\n' +
+            '                                    <td class="td_color">\n' +
+            '                                        <input type="number" value="0" name="row[{{ $index }}][density]">\n' +
+            '                                    </td>\n' +
+            '                                    <td class="td_color">\n' +
+            '                                        <input type="number" value="0" name="row[{{ $index }}][density]">\n' +
+            '                                    </td>\n' +
+            '                                    <td class="td_color">\n' +
+            '                                        <input type="number" value="0" name="row[{{ $index }}][density]">\n' +
+            '                                    </td>\n' +
+            '                                    <td>\n' +
+            '                                        <button class="btn btn-warning">Раскрыть</button>\n' +
+            '                                    </td>\n' +
+            '                                </tr>');
+    }
 
 }
 
+// МДС удаление
 
+let node_mds = document.getElementById('tierMDS');
+let button_mds = document.getElementById('clear_mds');
+
+button_mds.addEventListener('click', clearFunction);
+
+function clearFunction() {
+
+    if (index_mds >= 2){
+        node_mds.removeChild(node_mds.lastChild);
+        index_mds--;
+    }
+}

@@ -462,6 +462,61 @@
                                 </tr>
                                 </tbody>
                             </table>
+                            <table class="table table-sm table-bordered border-dark">
+                                <thead>
+                                <tr>
+                                    <th class="th_color">мдс</th>
+                                    <th class="th_color">1</th>
+                                    <th class="th_color">2</th>
+                                    <th class="th_color">3</th>
+                                    <th class="th_color">4</th>
+                                    <th class="th_color">5</th>
+                                    <th class="th_color">6</th>
+                                    <th class="th_color">7</th>
+                                    <th class="th_color">8</th>
+                                    <th class="th_color">Раскрыть</th>
+                                </tr>
+                                </thead>
+                                <tbody id="tierMDS">
+                                <tr>
+                                    <td>
+                                        <select name="row[{{ $index }}][class]">
+                                            <option value="0">0 - нет</option>
+                                        </select>
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                    </td>
+                                    <td class="td_color">
+                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-warning">Раскрыть</button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                                <input type="button" class="mb-3 mr-3" onclick="countRabbitsMDS()" style="background-color: #277648; color:white;"  value="+">
+                                <input type="button" id="clear_mds" class="mb-3" style="background-color: grey; color:white;" value="-">
+
+                            </table>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
@@ -471,4 +526,7 @@
                 </form>
             </div>
         </div>
+
+
+
 @endsection
