@@ -113,12 +113,27 @@ function countRabbitsMDS() {
 let node_mds = document.getElementById('tierMDS');
 let button_mds = document.getElementById('clear_mds');
 
-button_mds.addEventListener('click', clearFunction);
+button_mds.addEventListener('click', clearFunction_mds);
 
-function clearFunction() {
+function clearFunction_mds() {
 
     if (index_mds >= 2){
         node_mds.removeChild(node_mds.lastChild);
         index_mds--;
     }
 }
+
+
+let select = document.getElementById("mds");
+
+
+select.addEventListener("change", function(){
+    if (select.value === "да"){
+        alert('работает')
+    }
+    else{
+        alert('не работает')
+    }
+
+
+});
