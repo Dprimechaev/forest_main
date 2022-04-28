@@ -15,7 +15,7 @@ class CreateSecondsTable extends Migration
     {
         Schema::create('seconds', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('card_id')->default(1)->constrained('cards');
+            $table->foreignId('card_id')->constrained('cards');
             $table->string('tier');
             $table->string('coefComposition');
             $table->string('speciesComposition');

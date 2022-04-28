@@ -15,10 +15,7 @@ class CreateThirdsTable extends Migration
     {
         Schema::create('thirds', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('card_id');
-            $table->foreign('card_id')
-                ->references('id')
-                ->on('cards');
+            $table->foreignId('card_id')->constrained('cards');
             $table->integer('thousands')->nullable();
             $table->integer('height')->nullable();
             $table->integer('age')->nullable();
