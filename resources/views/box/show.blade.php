@@ -480,35 +480,35 @@
                                 <tbody id="tierMDS">
                                 <tr>
                                     <td>
-                                        <select id ="mds" name="row[{{ $index }}][class]">
-                                            <option value="нет">дефолт</option>
-                                            <option value="нет">нет</option>
-                                            <option value="да">да</option>
+                                        <select {{--id ="mds"--}} name="title">
+                                            <option value="Лесные культуры">Лесные культуры</option>
+{{--                                            <option value="нет">нет</option>--}}
+{{--                                            <option value="да">да</option>--}}
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                        <input type="number" name="year_created">
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                        <input type="text" name="cultivation_method">
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                        <input type="text" name="method_created">
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                        <input type="text" name="distance_between">
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                        <input type="text" name="distance_into">
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                        <input type="text" name="seats_number">
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                        <input type="text" name="condition">
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                        <input type="text" name="cause">
                                     </td>
                                     <td>
                                         <button type="button" class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Открыть второе модальное окно</button>

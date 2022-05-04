@@ -8,6 +8,7 @@ use App\Http\Requests\Card\ThirdCardStoreRequest;
 use App\Http\Requests\MaketCardStoreRequest;
 use App\Models\Box;
 use App\Models\Card;
+use App\Models\ForestCulture;
 use App\Models\Second;
 use App\Models\Third;
 use Illuminate\Http\Request;
@@ -36,6 +37,7 @@ class CardController extends Controller
                           ThirdCardStoreRequest $thirdCardStoreRequest, MaketCardStoreRequest $maketCardStoreRequest, Box $box)
     {
         try {
+
             /*values for first zone*/
             $firstValidated = $cardRequest->validated();
             $card = Card::create(['box_id' => $firstValidated['box_id']]);
@@ -56,6 +58,17 @@ class CardController extends Controller
             $thirdValidated = $thirdCardStoreRequest->validated();
             $thirdValidated['card_id'] = $card->id;
             Third::create($thirdValidated);
+            /*values for makets*/
+            $maketValidated = $maketCardStoreRequest->validated();
+            $maketValidated['card_id'] = $card->id;
+            switch ($maketCardStoreRequest->title){
+                case 'Лесные культуры':
+                    ForestCulture::create($maketValidated);
+                    break;
+                case 'Залупа':
+                    return abort(404);
+                    break;
+            }
 
         } catch (Exception $e){
             return back()->withInput()->withErrors($e->getMessage());

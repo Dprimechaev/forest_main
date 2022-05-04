@@ -24,17 +24,18 @@ class MaketCardStoreRequest extends FormRequest
     public function rules()
     {
         $rules = [];
+
         switch ($this->title) {
             case 'Лесные культуры':
                 $rules = [
-                    'year_created',
-                    'cultivation_method',
-                    'method_created',
-                    'distance_between',
-                    'distance_into',
-                    'seats_number',
-                    'condition',
-                    'cause',
+                    'year_created' => '',
+                    'cultivation_method' => '',
+                    'method_created' => '',
+                    'distance_between' => '',
+                    'distance_into' => '',
+                    'seats_number' => '',
+                    'condition' => '',
+                    'cause' => '',
                 ];
                 break;
         }
