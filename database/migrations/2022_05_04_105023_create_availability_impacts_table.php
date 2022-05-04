@@ -13,10 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('makets', function (Blueprint $table) {
+        Schema::create('availability_impacts', function (Blueprint $table) {
             $table->id();
             $table->foreignId('card_id')->constrained('cards');
-            $table->string('title');
+            //Доступность для хозяйственного воздействия
+            $table->string('availability');
+            $table->string('transport_type');
+            $table->string('tracks_distance');
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('makets');
+        Schema::dropIfExists('availability_impacts');
     }
 };

@@ -13,10 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('makets', function (Blueprint $table) {
+        Schema::create('soil_characteristics', function (Blueprint $table) {
             $table->id();
             $table->foreignId('card_id')->constrained('cards');
-            $table->string('title');
+            // Характеристика почв
+            $table->string('soil_type');
+            $table->string('mechanical_composition');
+            $table->string('soil_moisture');
+            $table->string('turf_degree');
+            $table->string('soil_power');
+            $table->string('output_percentage');
             $table->timestamps();
         });
     }
@@ -28,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('makets');
+        Schema::dropIfExists('soil_characteristics');
     }
 };

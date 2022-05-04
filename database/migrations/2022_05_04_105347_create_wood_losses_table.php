@@ -13,10 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('makets', function (Blueprint $table) {
+        Schema::create('wood_losses', function (Blueprint $table) {
             $table->id();
             $table->foreignId('card_id')->constrained('cards');
-            $table->string('title');
+            //Потери древесины
+            $table->string('loss_category');
+            $table->string('loss_location');
+            $table->string('breed');
+            $table->string('stock_total');
+            $table->string('liquid_stock');
+            $table->string('commercial_stock');
+            $table->string('loss_square');
             $table->timestamps();
         });
     }
@@ -28,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('makets');
+        Schema::dropIfExists('wood_losses');
     }
 };

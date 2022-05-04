@@ -13,10 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('makets', function (Blueprint $table) {
+        Schema::create('swamps', function (Blueprint $table) {
             $table->id();
             $table->foreignId('card_id')->constrained('cards');
-            $table->string('title');
+            //Болото
+            $table->string('swamp_type');
+            $table->string('swamp_vegetation');
+            $table->string('layer_thickness');
+            $table->string('overgrowing_rock');
+            $table->string('swamp_overgrowing');
             $table->timestamps();
         });
     }
@@ -28,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('makets');
+        Schema::dropIfExists('swamps');
     }
 };

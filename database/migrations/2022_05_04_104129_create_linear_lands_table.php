@@ -13,10 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('makets', function (Blueprint $table) {
+        Schema::create('linear_lands', function (Blueprint $table) {
             $table->id();
             $table->foreignId('card_id')->constrained('cards');
-            $table->string('title');
+            $table->string('width');
+            $table->string('length');
+            $table->string('state');
+            $table->string('road_purpose');
+            $table->string('coating_type');
+            $table->string('roadway_width');
+            $table->string('seasonality');
             $table->timestamps();
         });
     }
@@ -28,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('makets');
+        Schema::dropIfExists('linear_lands');
     }
 };

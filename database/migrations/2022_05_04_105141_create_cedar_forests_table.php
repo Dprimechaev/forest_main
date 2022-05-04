@@ -13,10 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('makets', function (Blueprint $table) {
+        Schema::create('cedar_forests', function (Blueprint $table) {
             $table->id();
             $table->foreignId('card_id')->constrained('cards');
-            $table->string('title');
+            // Комплексная оценка кедровников
+            $table->string('complex_type');
+            $table->string('yield_score');
+            $table->string('biological_harvest');
+            $table->string('complex_rank');
+            $table->string('resin_productivity');
+            $table->string('cedar_stock');
+            $table->string('fir_stock');
             $table->timestamps();
         });
     }
@@ -28,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('makets');
+        Schema::dropIfExists('cedar_forests');
     }
 };

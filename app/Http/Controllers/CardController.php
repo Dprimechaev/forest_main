@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\Card\FirstCardStoreRequest;
 use App\Http\Requests\Card\SecondCardStoreRequest;
 use App\Http\Requests\Card\ThirdCardStoreRequest;
+use App\Http\Requests\MaketCardStoreRequest;
 use App\Models\Box;
 use App\Models\Card;
 use App\Models\Second;
@@ -32,7 +33,7 @@ class CardController extends Controller
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(FirstCardStoreRequest $cardRequest, SecondCardStoreRequest $secondCardStoreRequest,
-                          ThirdCardStoreRequest $thirdCardStoreRequest, Box $box)
+                          ThirdCardStoreRequest $thirdCardStoreRequest, MaketCardStoreRequest $maketCardStoreRequest, Box $box)
     {
         try {
             /*values for first zone*/
@@ -55,6 +56,7 @@ class CardController extends Controller
             $thirdValidated = $thirdCardStoreRequest->validated();
             $thirdValidated['card_id'] = $card->id;
             Third::create($thirdValidated);
+
         } catch (Exception $e){
             return back()->withInput()->withErrors($e->getMessage());
         }

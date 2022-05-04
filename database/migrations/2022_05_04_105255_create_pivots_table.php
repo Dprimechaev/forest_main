@@ -13,10 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('makets', function (Blueprint $table) {
+        Schema::create('pivots', function (Blueprint $table) {
             $table->id();
             $table->foreignId('card_id')->constrained('cards');
-            $table->string('title');
+            //Подсочка
+            $table->string('breeding_start');
+            $table->string('planned_end');
+            $table->string('actual_completion');
+            $table->string('planting_condition');
+            $table->string('condition_reason');
+            $table->string('diagram_number');
+            $table->string('violation_technology');
+            $table->string('chemical_stimulant');
             $table->timestamps();
         });
     }
@@ -28,6 +36,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('makets');
+        Schema::dropIfExists('pivots');
     }
 };

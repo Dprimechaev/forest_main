@@ -13,10 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('makets', function (Blueprint $table) {
+        Schema::create('hydroforestries', function (Blueprint $table) {
             $table->id();
             $table->foreignId('card_id')->constrained('cards');
-            $table->string('title');
+            //Гидролесомелиорация
+            $table->string('drainage_network');
+            $table->string('commissioning_year');
+            $table->string('old_category');
+            $table->string('tree_species');
+            $table->string('dryer_distance');
+            $table->string('dryers_between');
+            $table->string('growth_class');
             $table->timestamps();
         });
     }
@@ -28,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('makets');
+        Schema::dropIfExists('hydroforestries');
     }
 };

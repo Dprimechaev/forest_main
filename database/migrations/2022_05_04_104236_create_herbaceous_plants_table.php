@@ -13,10 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('makets', function (Blueprint $table) {
+        Schema::create('herbaceous_plants', function (Blueprint $table) {
             $table->id();
             $table->foreignId('card_id')->constrained('cards');
-            $table->string('title');
+            $table->string('accounting_category');
+            $table->string('herbal_plants');
+            $table->string('first_plants');
+            $table->string('first_coverage');
+            $table->string('second_plants');
+            $table->string('second_coverage');
+            $table->string('third_plants');
+            $table->string('third_coverage');
             $table->timestamps();
         });
     }
@@ -28,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('makets');
+        Schema::dropIfExists('herbaceous_plants');
     }
 };
