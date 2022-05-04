@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('card_id')->constrained('cards');
             $table->string('title');
+            //Лесные культуры
             $table->integer('year_created');
             $table->string('cultivation_method');
             $table->string('method_created');
@@ -25,6 +26,7 @@ return new class extends Migration
             $table->string('seats_number');
             $table->string('condition');
             $table->string('cause');
+            //Повреждение насаждения
             $table->string('damage_type');
             $table->string('damage_year');
             $table->string('damaged_tree');
@@ -32,6 +34,7 @@ return new class extends Migration
             $table->string('disease_damage');
             $table->string('pest_type');
             $table->string('pest_damage');
+            // Земли линейного протяжения
             $table->string('width');
             $table->string('length');
             $table->string('state');
@@ -39,12 +42,16 @@ return new class extends Migration
             $table->string('coating_type');
             $table->string('roadway_width');
             $table->string('seasonality');
+            //Травянистые растения
+            $table->string('accounting_category');
+            $table->string('herbal_plants');
             $table->string('first_plants');
             $table->string('first_coverage');
             $table->string('second_plants');
             $table->string('second_coverage');
             $table->string('third_plants');
             $table->string('third_plants');
+            //Выполненные хозяйственные мероприятия
             $table->string('event');
             $table->string('year');
             $table->string('tree');
@@ -53,6 +60,7 @@ return new class extends Migration
             $table->string('performance');
             $table->string('reason_performance');
             $table->string('square');
+            //Недревесное сырьё
             $table->string('material_category');
             $table->string('tree_type');
             $table->integer('age');
@@ -60,6 +68,7 @@ return new class extends Migration
             $table->string('measurement_unit');
             $table->string('yield');
             $table->string('harvest_availability');
+            //Селькоехозяйственное угодье
             $table->string('land_user');
             $table->string('land_quality');
             $table->string('pasture_type');

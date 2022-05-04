@@ -547,8 +547,4 @@
                 </form>
             </div>
         </div>
-
-
-
-
 @endsection
