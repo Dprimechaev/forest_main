@@ -5,9 +5,13 @@ namespace App\Http\Controllers;
 use App\Http\Requests\Card\FirstCardStoreRequest;
 use App\Http\Requests\Card\SecondCardStoreRequest;
 use App\Http\Requests\Card\ThirdCardStoreRequest;
+use App\Http\Requests\MaketCardStoreRequest;
 use App\Models\Box;
 use App\Models\Card;
+use App\Models\ForestCulture;
+use App\Models\LinearLands;
 use App\Models\Second;
+use App\Models\StandDamage;
 use App\Models\Third;
 use Illuminate\Http\Request;
 use PHPUnit\Exception;
@@ -32,9 +36,10 @@ class CardController extends Controller
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(FirstCardStoreRequest $cardRequest, SecondCardStoreRequest $secondCardStoreRequest,
-                          ThirdCardStoreRequest $thirdCardStoreRequest, Box $box)
+                          ThirdCardStoreRequest $thirdCardStoreRequest, MaketCardStoreRequest $maketCardStoreRequest, Box $box)
     {
         try {
+
             /*values for first zone*/
             $firstValidated = $cardRequest->validated();
             $card = Card::create(['box_id' => $firstValidated['box_id']]);
@@ -55,6 +60,72 @@ class CardController extends Controller
             $thirdValidated = $thirdCardStoreRequest->validated();
             $thirdValidated['card_id'] = $card->id;
             Third::create($thirdValidated);
+            /*values for makets*/
+            $maketValidated = $maketCardStoreRequest->validated();
+            $maketValidated['card_id'] = $card->id;
+            switch ($maketCardStoreRequest->title){
+                case 'Лесные культуры':
+                    ForestCulture::create($maketValidated);
+                    break;
+                case 'Повреждение насаждения':
+                    StandDamage::create($maketValidated);
+                    break;
+                case 'Земли линейного протяжения':
+                    LinearLands::create($maketValidated);
+                    break;
+                case 'Травянистые растения':
+                    ForestCulture::create($maketValidated);
+                    break;
+                case 'Выолненные хозяйственные мероприятия':
+                    StandDamage::create($maketValidated);
+                    break;
+                case 'Недревесное сырье':
+                    LinearLands::create($maketValidated);
+                    break;
+                case 'Сельскохозяйственное угодье':
+                    ForestCulture::create($maketValidated);
+                    break;
+                case 'Подсочка':
+                    StandDamage::create($maketValidated);
+                    break;
+                case 'Болото':
+                    LinearLands::create($maketValidated);
+                    break;
+                case 'Потери древесины':
+                    ForestCulture::create($maketValidated);
+                    break;
+                case 'Рекреационная характеристика':
+                    StandDamage::create($maketValidated);
+                    break;
+                case 'Сад':
+                    LinearLands::create($maketValidated);
+                    break;
+                case 'Особенности выдела':
+                    ForestCulture::create($maketValidated);
+                    break;
+                case 'Характеристика почв':
+                    StandDamage::create($maketValidated);
+                    break;
+                case 'Плантация, древесная школа':
+                    LinearLands::create($maketValidated);
+                    break;
+                case 'Селекционная оценка':
+                    ForestCulture::create($maketValidated);
+                    break;
+                case 'Данные предыдущего лесойстройства':
+                    StandDamage::create($maketValidated);
+                    break;
+                case 'Доступность для хозйственного воздействия':
+                    LinearLands::create($maketValidated);
+                    break;
+                case 'Гидролесомелиорация':
+                    ForestCulture::create($maketValidated);
+                    break;
+                case 'Коплексная оценка кедровников':
+                    StandDamage::create($maketValidated);
+                    break;
+            }
+
         } catch (Exception $e){
             return back()->withInput()->withErrors($e->getMessage());
         }

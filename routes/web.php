@@ -28,3 +28,5 @@ Route::middleware(['auth'])->group(function (){
     Route::resource('card', CardController::class);
     Route::resource('box', BoxController::class);
 });
+
+Route::get('/export', [\App\Http\Controllers\ExportController::class, 'export'])->name('box.export');

@@ -15,7 +15,7 @@ class CreateFirstsTable extends Migration
     {
         Schema::create('firsts', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('card_id')->default(1)->constrained('cards');
+            $table->foreignId('card_id')->constrained('cards');
             $table->string('republic')->nullable();
             $table->string('district')->nullable();
             $table->string('region')->nullable();

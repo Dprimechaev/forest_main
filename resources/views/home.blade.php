@@ -7,7 +7,7 @@
             @csrf
             <div class="mb-3">
                 <label class="form-label">Введите название базы данных</label>
-                <input type="text" name="title" placeholder="Имя базы данных:" class="form-control" aria-describedby="emailHelp">
+                <input type="text" name="title" placeholder="Имя базы данных:" class="form-control" aria-describedby="emailHelp" required>
             </div>
             <button type="submit" class="btn btn-primary" style="background-color: #277648" >Создать БД</button>
         </form>

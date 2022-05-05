@@ -50,13 +50,15 @@
         </tbody>
     </table>
 
-        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-                <div class="modal-content">
-                    <form method="POST" action="{{ route('card.store', ['box_id' => $box->id]) }}">
+    <!-- Модальное окно -->
+        <div class="modal fade" id="exampleModalToggle" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalToggleLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <form method="POST" action="{{ route('card.store', ['box_id' => $box->id]) }}">
+                    @csrf
+                    <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalToggleLabel">Карточка Таксации</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <h5 class="modal-title" id="exampleModalToggle">Карточка Таксации</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
                         </div>
                         <div class="modal-body">
                             <table class="table table-sm table-bordered border-dark">
@@ -479,9 +481,8 @@
                                 <tr>
                                     <td>
                                         <select id ="mds" name="row[{{ $index }}][class]">
-                                            <option value="Не выбрано">Не выбрано</option>
-                                            <option value="Лесные культуры">Лесные культуры</option>
-                                            <option value="Повреждение насаждения">Повреждение насаждения</option>
+                                            <option value="нет">дефолт</option>
+                                            <option value="нет">нет</option>
                                             <option value="да">да</option>
                                         </select>
                                     </td>
@@ -510,7 +511,7 @@
                                         <input type="number" value="0" name="row[{{ $index }}][density]">
                                     </td>
                                     <td>
-                                        <button type="button" class="btn btn-warning" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Раскрыть</button>
+                                        <button type="button" class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Открыть второе модальное окно</button>
                                     </td>
                                 </tr>
                                 </tbody>
@@ -543,7 +544,6 @@
                 </div>
             </div>
         </div>
-
 
 
 
