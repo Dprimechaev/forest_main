@@ -80,6 +80,7 @@ class MaketCardStoreRequest extends FormRequest
                     'analysis' => '',
                     'performance' => '',
                     'reason_performance' => '',
+                    'square' => '',
                 ];
                 break;
             case 'Недревесное сырье':
@@ -95,167 +96,146 @@ class MaketCardStoreRequest extends FormRequest
                 break;
             case 'Сельскохозяйственное угодье':
                 $rules = [
-                    'width' => '',
-                    'length' => '',
-                    'state' => '',
-                    'road_purpose' => '',
-                    'coating_type' => '',
-                    'roadway_width' => '',
-                    'seasonality' => '',
+                    'land_user' => '',
+                    'land_quality' => '',
+                    'pasture_type' => '',
+                    'land_condition' => '',
+                    'land_overgrowing' => '',
+                    'overgrowing_percentage' => '',
+                    'hayfield_yield' => '',
                 ];
                 break;
             case 'Подсочка':
                 $rules = [
-                    'width' => '',
-                    'length' => '',
-                    'state' => '',
-                    'road_purpose' => '',
-                    'coating_type' => '',
-                    'roadway_width' => '',
-                    'seasonality' => '',
+                    'breeding_start' => '',
+                    'planned_end' => '',
+                    'actual_completion' => '',
+                    'planting_condition' => '',
+                    'condition_reason' => '',
+                    'diagram_number' => '',
+                    'violation_technology' => '',
+                    'chemical_stimulant' => '',
                 ];
                 break;
             case 'Болото':
                 $rules = [
-                    'width' => '',
-                    'length' => '',
-                    'state' => '',
-                    'road_purpose' => '',
-                    'coating_type' => '',
-                    'roadway_width' => '',
-                    'seasonality' => '',
+                    'swamp_type' => '',
+                    'swamp_vegetation' => '',
+                    'layer_thickness' => '',
+                    'overgrowing_rock' => '',
+                    'swamp_overgrowing' => '',
                 ];
                 break;
             case 'Потери древесины':
                 $rules = [
-                    'width' => '',
-                    'length' => '',
-                    'state' => '',
-                    'road_purpose' => '',
-                    'coating_type' => '',
-                    'roadway_width' => '',
-                    'seasonality' => '',
+                    'loss_category' => '',
+                    'loss_location' => '',
+                    'breed' => '',
+                    'stock_total' => '',
+                    'liquid_stock' => '',
+                    'commercial_stock' => '',
+                    'loss_square' => '',
                 ];
                 break;
             case 'Рекреационная характеристика':
                 $rules = [
-                    'width' => '',
-                    'length' => '',
-                    'state' => '',
-                    'road_purpose' => '',
-                    'coating_type' => '',
-                    'roadway_width' => '',
-                    'seasonality' => '',
+                    'landscape_type' => '',
+                    'aesthetic_class' => '',
+                    'recreational_class' => '',
+                    'stability_class' => '',
+                    'passability_degree' => '',
+                    'viewability' => '',
+                    'degradation_stages' => '',
+                    'improvement_elements' => '',
                 ];
                 break;
             case 'Сад':
                 $rules = [
-                    'width' => '',
-                    'length' => '',
-                    'state' => '',
-                    'road_purpose' => '',
-                    'coating_type' => '',
-                    'roadway_width' => '',
-                    'seasonality' => '',
+                    'garden_categor' => '',
+                    'bookmark_year' => '',
+                    'garden_breed' => '',
+                    'between_rows' => '',
+                    'row_spacing' => '',
+                    'trees_number' => '',
+                    'fruit_bearing' => '',
+                    'garden_yield' => '',
                 ];
                 break;
             case 'Особенности выдела':
                 $rules = [
-                    'width' => '',
-                    'length' => '',
-                    'state' => '',
-                    'road_purpose' => '',
-                    'coating_type' => '',
-                    'roadway_width' => '',
-                    'seasonality' => '',
+                    'first_peculiarity' => '',
+                    'second_peculiarity' => '',
+                    'third_peculiarity' => '',
+                    'fourth_peculiarity' => '',
+                    'fifth_peculiarity' => '',
+                    'sixth_peculiarity' => '',
+                    'seventh_peculiarity' => '',
+                    'eighth_peculiarity' => '',
                 ];
                 break;
             case 'Характеристика почв':
                 $rules = [
-                    'width' => '',
-                    'length' => '',
-                    'state' => '',
-                    'road_purpose' => '',
-                    'coating_type' => '',
-                    'roadway_width' => '',
-                    'seasonality' => '',
+                    'soil_type' => '',
+                    'mechanical_composition' => '',
+                    'soil_moisture' => '',
+                    'turf_degree' => '',
+                    'soil_power' => '',
+                    'output_percentage' => '',
                 ];
                 break;
             case 'Плантация, древесная школа':
                 $rules = [
-                    'width' => '',
-                    'length' => '',
-                    'state' => '',
-                    'road_purpose' => '',
-                    'coating_type' => '',
-                    'roadway_width' => '',
-                    'seasonality' => '',
+                    'plantation_appointment' => '',
+                    'plantation_year' => '',
+                    'plantation_between' => '',
+                    'plantation_into' => '',
+                    'plantation_number' => '',
                 ];
                 break;
             case 'Селекционная оценка':
                 $rules = [
-                    'width' => '',
-                    'length' => '',
-                    'state' => '',
-                    'road_purpose' => '',
-                    'coating_type' => '',
-                    'roadway_width' => '',
-                    'seasonality' => '',
-                ];
-                break;
-            case 'Земли линейного протяжения':
-                $rules = [
-                    'width' => '',
-                    'length' => '',
-                    'state' => '',
-                    'road_purpose' => '',
-                    'coating_type' => '',
-                    'roadway_width' => '',
-                    'seasonality' => '',
+                    'selection_indicators' => '',
                 ];
                 break;
             case 'Данные предыдущего лесойстройства':
                 $rules = [
-                    'width' => '',
-                    'length' => '',
-                    'state' => '',
-                    'road_purpose' => '',
-                    'coating_type' => '',
-                    'roadway_width' => '',
-                    'seasonality' => '',
+                    'partition_number' => '',
+                    'partation_square' => '',
+                    'partation_category' => '',
+                    'partation_coefficient' => '',
+                    'partation_dominant' => '',
+                    'partation_main' => '',
+                    'partation_completeness' => '',
+                    'projected_event' => '',
                 ];
                 break;
             case 'Доступность для хозйственного воздействия':
                 $rules = [
-                    'width' => '',
-                    'length' => '',
-                    'state' => '',
-                    'road_purpose' => '',
-                    'coating_type' => '',
-                    'roadway_width' => '',
-                    'seasonality' => '',
+                    'availability' => '',
+                    'transport_type' => '',
+                    'tracks_distance' => '',
                 ];
                 break;
             case 'Гидролесомелиорация':
                 $rules = [
-                    'width' => '',
-                    'length' => '',
-                    'state' => '',
-                    'road_purpose' => '',
-                    'coating_type' => '',
-                    'roadway_width' => '',
-                    'seasonality' => '',
+                    'drainage_network' => '',
+                    'commissioning_year' => '',
+                    'old_category' => '',
+                    'tree_species' => '',
+                    'dryer_distance' => '',
+                    'dryers_between' => '',
+                    'growth_class' => '',
                 ];
                 break;
             case 'Коплексная оценка кедровников':
                 $rules = [
-                    'width' => '',
-                    'length' => '',
-                    'state' => '',
-                    'road_purpose' => '',
-                    'coating_type' => '',
-                    'roadway_width' => '',
-                    'seasonality' => '',
+                    'complex_type' => '',
+                    'yield_score' => '',
+                    'biological_harvest' => '',
+                    'complex_rank' => '',
+                    'resin_productivity' => '',
+                    'cedar_stock' => '',
+                    'fir_stock' => '',
                 ];
                 break;
         }

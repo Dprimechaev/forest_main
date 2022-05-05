@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class SelectionIndicators extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'selection_indicators'
+    ];
 }

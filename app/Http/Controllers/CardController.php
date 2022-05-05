@@ -73,6 +73,57 @@ class CardController extends Controller
                 case 'Земли линейного протяжения':
                     LinearLands::create($maketValidated);
                     break;
+                case 'Травянистые растения':
+                    ForestCulture::create($maketValidated);
+                    break;
+                case 'Выолненные хозяйственные мероприятия':
+                    StandDamage::create($maketValidated);
+                    break;
+                case 'Недревесное сырье':
+                    LinearLands::create($maketValidated);
+                    break;
+                case 'Сельскохозяйственное угодье':
+                    ForestCulture::create($maketValidated);
+                    break;
+                case 'Подсочка':
+                    StandDamage::create($maketValidated);
+                    break;
+                case 'Болото':
+                    LinearLands::create($maketValidated);
+                    break;
+                case 'Потери древесины':
+                    ForestCulture::create($maketValidated);
+                    break;
+                case 'Рекреационная характеристика':
+                    StandDamage::create($maketValidated);
+                    break;
+                case 'Сад':
+                    LinearLands::create($maketValidated);
+                    break;
+                case 'Особенности выдела':
+                    ForestCulture::create($maketValidated);
+                    break;
+                case 'Характеристика почв':
+                    StandDamage::create($maketValidated);
+                    break;
+                case 'Плантация, древесная школа':
+                    LinearLands::create($maketValidated);
+                    break;
+                case 'Селекционная оценка':
+                    ForestCulture::create($maketValidated);
+                    break;
+                case 'Данные предыдущего лесойстройства':
+                    StandDamage::create($maketValidated);
+                    break;
+                case 'Доступность для хозйственного воздействия':
+                    LinearLands::create($maketValidated);
+                    break;
+                case 'Гидролесомелиорация':
+                    ForestCulture::create($maketValidated);
+                    break;
+                case 'Коплексная оценка кедровников':
+                    StandDamage::create($maketValidated);
+                    break;
             }
 
         } catch (Exception $e){

@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class AvailabilityImpact extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'availability',
+        'transport_type',
+        'tracks_distance',
+    ];
 }
