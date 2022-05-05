@@ -9,7 +9,9 @@ use App\Http\Requests\MaketCardStoreRequest;
 use App\Models\Box;
 use App\Models\Card;
 use App\Models\ForestCulture;
+use App\Models\LinearLands;
 use App\Models\Second;
+use App\Models\StandDamage;
 use App\Models\Third;
 use Illuminate\Http\Request;
 use PHPUnit\Exception;
@@ -65,8 +67,11 @@ class CardController extends Controller
                 case 'Лесные культуры':
                     ForestCulture::create($maketValidated);
                     break;
-                case 'Залупа':
-                    return abort(404);
+                case 'Повреждение насаждения':
+                    StandDamage::create($maketValidated);
+                    break;
+                case 'Земли линейного протяжения':
+                    LinearLands::create($maketValidated);
                     break;
             }
 

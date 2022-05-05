@@ -482,8 +482,8 @@
                                     <td>
                                         <select {{--id ="mds"--}} name="title">
                                             <option value="Лесные культуры">Лесные культуры</option>
-{{--                                            <option value="нет">нет</option>--}}
-{{--                                            <option value="да">да</option>--}}
+                                            <option value="Повреждение насаждения">Повреждение насаждения</option>
+                                            <option value="Земли линейного протяжения">Земли линейного протяжения</option>
                                         </select>
                                     </td>
                                     <td class="td_color">
