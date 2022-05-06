@@ -76,28 +76,44 @@
                                 <tr>
                                     <td class="td_color">
                                         <select name="republic">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Республика')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                     <td class="td_color">
                                         <select name="region">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Районное лесничество')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                     <td class="td_color">
                                         <select name="district">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Участковое лесничество')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0" name="quarter">
+                                        <input type="text" name="quarter">
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0" name="distance">
+                                        <input type="text" name="distance">
                                     </td>
                                     <td class="td_color">
                                         <select name="renter">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Арендатор')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                 </tr>
@@ -128,22 +144,38 @@
                                     </td>
                                     <td class="td_color">
                                         <select name="earthCategory">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Категория земель')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                     <td class="td_color">
                                         <select name="protectionCategory">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Категория защитности')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                     <td class="td_color">
                                         <select name="cutWay">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Способ рубки')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                     <td class="td_color">
                                         <select name="ozu">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'ОЗУ')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                     <td class="td_color">
@@ -151,7 +183,11 @@
                                     </td>
                                     <td class="td_color">
                                         <select name="exposition">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Экспозиция')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                     <td class="td_color">
@@ -159,10 +195,18 @@
                                     </td>
                                     <td class="td_color">
                                         <select name="erozionForm">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Вид эрозии')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                         <select name="erozionDegree">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Степень эрозии')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                 </tr>
@@ -189,7 +233,11 @@
                                     </td>
                                     <td class="td_color">
                                         <select name="firstEvent">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Первое мероприятие')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                     <td class="td_color">
@@ -200,7 +248,11 @@
                                     </td>
                                     <td class="td_color">
                                         <select name="secondEvent">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Второе мероприятие')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                     <td class="td_color">
@@ -208,7 +260,11 @@
                                     </td>
                                     <td class="td_color">
                                         <select name="thirdEvent">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Третье мероприятие')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                     <td class="td_color">
@@ -216,7 +272,11 @@
                                     </td>
                                     <td class="td_color">
                                         <select name="target">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Целевая порода')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                 </tr>
@@ -240,27 +300,47 @@
                                 <tr>
                                     <td class="td_color">
                                         <select name="dominantBreed">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Преобладающая порода')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                     <td class="td_color">
                                         <select name="bonitetClass">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Класс бонитета')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                     <td class="td_color">
                                         <select name="forestType">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Тип леса')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                     <td class="td_color">
                                         <select name="tlu">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'ТЛУ')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                     <td class="td_color">
                                         <select name="fireDangeros">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Класс пожарной опасности')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                     <td class="td_color">
@@ -275,7 +355,11 @@
                                     </td>
                                     <td class="td_color">
                                         <select name="cutType">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Тип вырубки')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                 </tr>
@@ -322,16 +406,21 @@
                                     </td>
                                     <td class="td_color">
                                         <select name="row[{{ $index }}][tier]">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Ярус')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <select name="row[{{ $index }}][coefComposition]">
-                                            <option value="0">0 - нет</option>
-                                        </select>
+                                        <input type="number" name="row[{{ $index }}][coefComposition]">
                                         <select name="row[{{ $index }}][speciesComposition]">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Состав порода')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                     <td class="td_color">
@@ -344,12 +433,16 @@
                                         <input type="number" value="0" name="row[{{ $index }}][diameter]">
                                     </td>
                                     <td class="td_color">
-                                        <select name="row[{{ $index }}][class]">
-                                            <option value="0">0 - нет</option>
-                                        </select>
+                                        <input type="number" name="row[{{ $index }}][class]">
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                        <select name="row[{{ $index }}][density]">
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Происхождение')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
+                                        </select>
                                     </td>
                                     <td class="td_color">
                                         <input type="text" value="0" name="row[{{ $index }}][origin]">
@@ -414,7 +507,11 @@
                                     </td>
                                     <td class="td_color">
                                         <select name="podrostOne">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Подрост 1')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                     <td class="td_color">
@@ -422,7 +519,11 @@
                                     </td>
                                     <td class="td_color">
                                         <select name="podrostTwo">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Подрост 2')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                     <td class="td_color">
@@ -430,33 +531,54 @@
                                     </td>
                                     <td class="td_color">
                                         <select name="podrostThree">
-                                            <option value="0">0 - нет</option>
-                                        </select>
-                                    </td>
-                                    <td class="td_color">
-                                        <select name="por">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Подрост 3')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                     <td class="td_color">
                                         <select name="Oc">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Оценка')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                     <td class="td_color">
+                                    </td>
+                                    <td class="td_color">
                                         <select name="density">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Густота')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                     <td class="td_color">
                                         <select name="podlesokOne">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Подлесок 1')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                         <select name="podlesokTwo">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Подлесок 2')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                         <select name="podlesokThree">
-                                            <option value="0">0 - нет</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Подлесок 3')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                 </tr>
@@ -481,9 +603,11 @@
                                 <tr>
                                     <td>
                                         <select id ="mds" name="row[{{ $index }}][class]">
-                                            <option value="нет">дефолт</option>
-                                            <option value="нет">нет</option>
-                                            <option value="да">да</option>
+                                            @foreach($handbooks as $handbook)
+                                                @if($handbook->key === 'Макет')
+                                                    <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </td>
                                     <td class="td_color">

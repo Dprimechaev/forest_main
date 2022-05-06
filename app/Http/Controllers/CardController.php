@@ -56,7 +56,6 @@ class CardController extends Controller
                           ThirdCardStoreRequest $thirdCardStoreRequest, MaketCardStoreRequest $maketCardStoreRequest, Box $box)
     {
         try {
-
             /*values for first zone*/
             $firstValidated = $cardRequest->validated();
             $card = Card::create(['box_id' => $firstValidated['box_id']]);

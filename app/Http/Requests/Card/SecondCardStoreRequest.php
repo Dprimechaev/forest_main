@@ -32,7 +32,7 @@ class SecondCardStoreRequest extends FormRequest
             'row.*.age' => 'numeric',
             'row.*.height' => 'numeric',
             'row.*.diameter' => 'numeric',
-            'row.*.class' => 'numeric',
+            'row.*.class' => '',
             'row.*.density' => 'numeric',
             'row.*.g' => 'numeric',
             'row.*.stock' => 'numeric',

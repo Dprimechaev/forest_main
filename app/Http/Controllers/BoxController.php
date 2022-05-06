@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Box;
 use App\Models\Card;
+use App\Models\HandBook;
 use Auth;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
@@ -61,7 +62,8 @@ class BoxController extends Controller
     public function show(Box $box, Request $request)
     {
         $cards = Card::where('box_id', $box->id)->with('first')->get();
-        return view('box.show', compact(['cards', 'box']));
+        $handbooks = HandBook::where('user_id', \Auth::id())->orWhere('user_id', null)->get();
+        return view('box.show', compact(['cards', 'box', 'handbooks']));
     }
 
     /**

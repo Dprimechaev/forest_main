@@ -14,7 +14,7 @@ class HandBookController extends Controller
      */
     public function index()
     {
-        $handbooks = HandBook::query()->where('user_id', \Auth::id())->orWhere('user_id', null)->get();
+        $handbooks = HandBook::where('user_id', \Auth::id())->orWhere('user_id', null)->get();
         return view('handbook.index', ['handbooks' => $handbooks]);
     }
 
