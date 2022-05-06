@@ -480,35 +480,35 @@
                                 <tbody id="tierMDS">
                                 <tr>
                                     <td>
-                                        <select {{--id ="mds"--}} name="title">
-                                            <option value="Лесные культуры">Лесные культуры</option>
-                                            <option value="Повреждение насаждения">Повреждение насаждения</option>
-                                            <option value="Земли линейного протяжения">Земли линейного протяжения</option>
+                                        <select id ="mds" name="row[{{ $index }}][class]">
+                                            <option value="нет">дефолт</option>
+                                            <option value="нет">нет</option>
+                                            <option value="да">да</option>
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" name="year_created">
+                                        <input type="number" value="0" name="row[{{ $index }}][density]">
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" name="cultivation_method">
+                                        <input type="number" value="0" name="row[{{ $index }}][density]">
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" name="method_created">
+                                        <input type="number" value="0" name="row[{{ $index }}][density]">
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" name="distance_between">
+                                        <input type="number" value="0" name="row[{{ $index }}][density]">
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" name="distance_into">
+                                        <input type="number" value="0" name="row[{{ $index }}][density]">
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" name="seats_number">
+                                        <input type="number" value="0" name="row[{{ $index }}][density]">
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" name="condition">
+                                        <input type="number" value="0" name="row[{{ $index }}][density]">
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" name="cause">
+                                        <input type="number" value="0" name="row[{{ $index }}][density]">
                                     </td>
                                     <td>
                                         <button type="button" class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Открыть второе модальное окно</button>
@@ -519,32 +519,33 @@
                                 <input type="button" id="clear_mds" class="mb-3" style="background-color: grey; color:white;" value="-">
 
                             </table>
-
-                            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalToggleLabel2">Модалка 2</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            Скройте это модальное окно и покажите первое с помощью кнопки ниже.
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Вернуться к первому</button>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                                <button type="submit" class="btn btn-primary" style="background-color: #277648">Сохранить изменения</button>
                             </div>
                         </div>
-
-
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-                            <button type="submit" class="btn btn-primary" style="background-color: #277648">Сохранить изменения</button>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalToggleLabel2">МДС</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="mds_form">
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" style="background-color: #277648;" type="button" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Вернуться к карточке</button>
+                        <button class="btn btn-primary" onclick="mdsSave()" id="mds_save" style="background-color: #277648;" type="button" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Сохранить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
 @endsection
