@@ -84,6 +84,7 @@
                         <a href="" class="nav-link">
                             <i class="fas fa-solid fa-book nav-icon"></i>
                             <p>Справочник</p>
+                            <p></p>
                         </a>
                     </li>
                 </ul>
