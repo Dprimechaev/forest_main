@@ -6,13 +6,30 @@ use App\Http\Requests\Card\FirstCardStoreRequest;
 use App\Http\Requests\Card\SecondCardStoreRequest;
 use App\Http\Requests\Card\ThirdCardStoreRequest;
 use App\Http\Requests\MaketCardStoreRequest;
+use App\Models\AgriculturalLand;
+use App\Models\AvailabilityImpact;
 use App\Models\Box;
 use App\Models\Card;
+use App\Models\CedarForest;
 use App\Models\ForestCulture;
+use App\Models\Garden;
+use App\Models\HerbaceousPlants;
+use App\Models\Hydroforestry;
 use App\Models\LinearLands;
+use App\Models\NonwoodMaterials;
+use App\Models\PerformedActivities;
+use App\Models\Pivot;
+use App\Models\PreviousInventory;
+use App\Models\RecreationalCharacteristic;
 use App\Models\Second;
+use App\Models\SelectionFeatures;
+use App\Models\SelectionIndicators;
+use App\Models\SoilCharacteristic;
 use App\Models\StandDamage;
+use App\Models\Swamp;
 use App\Models\Third;
+use App\Models\TreeScale;
+use App\Models\WoodLoss;
 use Illuminate\Http\Request;
 use PHPUnit\Exception;
 use Symfony\Component\Console\Input\Input;
@@ -74,55 +91,55 @@ class CardController extends Controller
                     LinearLands::create($maketValidated);
                     break;
                 case 'Травянистые растения':
-                    ForestCulture::create($maketValidated);
+                    HerbaceousPlants::create($maketValidated);
                     break;
-                case 'Выолненные хозяйственные мероприятия':
-                    StandDamage::create($maketValidated);
+                case 'Выполненные хозяйственные мероприятия':
+                    PerformedActivities::create($maketValidated);
                     break;
                 case 'Недревесное сырье':
-                    LinearLands::create($maketValidated);
+                    NonwoodMaterials::create($maketValidated);
                     break;
                 case 'Сельскохозяйственное угодье':
-                    ForestCulture::create($maketValidated);
+                    AgriculturalLand::create($maketValidated);
                     break;
                 case 'Подсочка':
-                    StandDamage::create($maketValidated);
+                    Pivot::create($maketValidated);
                     break;
                 case 'Болото':
-                    LinearLands::create($maketValidated);
+                    Swamp::create($maketValidated);
                     break;
                 case 'Потери древесины':
-                    ForestCulture::create($maketValidated);
+                    WoodLoss::create($maketValidated);
                     break;
                 case 'Рекреационная характеристика':
-                    StandDamage::create($maketValidated);
+                    RecreationalCharacteristic::create($maketValidated);
                     break;
                 case 'Сад':
-                    LinearLands::create($maketValidated);
+                    Garden::create($maketValidated);
                     break;
                 case 'Особенности выдела':
-                    ForestCulture::create($maketValidated);
+                    SelectionFeatures::create($maketValidated);
                     break;
                 case 'Характеристика почв':
-                    StandDamage::create($maketValidated);
+                    SoilCharacteristic::create($maketValidated);
                     break;
-                case 'Плантация, древесная школа':
-                    LinearLands::create($maketValidated);
+                case 'Плантация, древесная шкала':
+                    TreeScale::create($maketValidated);
                     break;
                 case 'Селекционная оценка':
-                    ForestCulture::create($maketValidated);
+                    SelectionIndicators::create($maketValidated);
                     break;
-                case 'Данные предыдущего лесойстройства':
-                    StandDamage::create($maketValidated);
+                case 'Данные предыдущего лесоустройства':
+                    PreviousInventory::create($maketValidated);
                     break;
-                case 'Доступность для хозйственного воздействия':
-                    LinearLands::create($maketValidated);
+                case 'Доступность для хозяйственного воздействия':
+                    AvailabilityImpact::create($maketValidated);
                     break;
                 case 'Гидролесомелиорация':
-                    ForestCulture::create($maketValidated);
+                    Hydroforestry::create($maketValidated);
                     break;
                 case 'Коплексная оценка кедровников':
-                    StandDamage::create($maketValidated);
+                    CedarForest::create($maketValidated);
                     break;
             }
 

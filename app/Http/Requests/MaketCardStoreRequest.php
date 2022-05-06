@@ -183,7 +183,7 @@ class MaketCardStoreRequest extends FormRequest
                     'output_percentage' => '',
                 ];
                 break;
-            case 'Плантация, древесная школа':
+            case 'Плантация, древесная шкала':
                 $rules = [
                     'plantation_appointment' => '',
                     'plantation_year' => '',
@@ -197,7 +197,7 @@ class MaketCardStoreRequest extends FormRequest
                     'selection_indicators' => '',
                 ];
                 break;
-            case 'Данные предыдущего лесойстройства':
+            case 'Данные предыдущего лесоустройства':
                 $rules = [
                     'partition_number' => '',
                     'partation_square' => '',
@@ -209,7 +209,7 @@ class MaketCardStoreRequest extends FormRequest
                     'projected_event' => '',
                 ];
                 break;
-            case 'Доступность для хозйственного воздействия':
+            case 'Доступность для хозяйственного воздействия':
                 $rules = [
                     'availability' => '',
                     'transport_type' => '',

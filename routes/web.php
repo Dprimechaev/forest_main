@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\BoxController;
 use App\Http\Controllers\CardController;
+use App\Http\Controllers\ExportController;
+use App\Http\Controllers\HandBookController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,6 +29,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home.index');
 Route::middleware(['auth'])->group(function (){
     Route::resource('card', CardController::class);
     Route::resource('box', BoxController::class);
+    Route::resource('handbook', HandBookController::class);
 });
 
-Route::get('/export', [\App\Http\Controllers\ExportController::class, 'export'])->name('box.export');
+Route::get('/export', [ExportController::class, 'export'])->name('box.export');
