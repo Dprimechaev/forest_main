@@ -81,7 +81,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">
+                        <a href="{{ route('handbook.index') }}" class="nav-link">
                             <i class="fas fa-solid fa-book nav-icon"></i>
                             <p>Справочник</p>
                             <p></p>

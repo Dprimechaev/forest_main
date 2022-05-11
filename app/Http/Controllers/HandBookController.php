@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\HandBookStoreRequest;
 use App\Models\HandBook;
 use Illuminate\Http\Request;
 
@@ -34,9 +35,11 @@ class HandBookController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, HandBook $handBook)
+    public function store(HandBookStoreRequest $handBookStoreRequest, HandBook $handBook)
     {
-        $handBook->create($request->all());
+//        dd($handBookStoreRequest->all());
+        $validated = $handBookStoreRequest->validated();
+        $handBook->create($validated + ['user_id' => \Auth::id()]);
         return redirect()->back();
     }
 
