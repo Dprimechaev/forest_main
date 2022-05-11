@@ -32,4 +32,4 @@ Route::middleware(['auth'])->group(function (){
     Route::resource('handbook', HandBookController::class);
 });
 
-Route::get('/export', [ExportController::class, 'export'])->name('box.export');
+Route::post('/export/{box}', [ExportController::class, 'export'])->name('box.export');

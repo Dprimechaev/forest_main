@@ -30,6 +30,7 @@
         <th scope="col">Название базы данных</th>
         <th scope="col">Перейти</th>
         <th scope="col">Удалить</th>
+        <th scope="col">Экспорт xlsx</th>
     </tr>
     </thead>
     <tbody>
@@ -46,6 +47,12 @@
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="mt-3 btn btn-danger">Удалить</button>
+                </form>
+            </td>
+            <td>
+                <form action="{{ route('box.export', $box) }}" method="post">
+                    @csrf
+                <button class="mt-3 btn btn-success">Загрузить</button>
                 </form>
             </td>
         </tr>

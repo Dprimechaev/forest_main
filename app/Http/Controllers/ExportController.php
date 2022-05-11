@@ -13,6 +13,6 @@ class ExportController extends Controller
 {
     public function export(Box $box)
     {
-        return Excel::download(new CardExport(), 'box.xlsx');
+        return Excel::download(new CardExport($box), 'box.xlsx');
     }
 }

@@ -1,11 +1,10 @@
 <table>
     <thead>
     <tr>
-        <th>Номер</th>
         <th>Название</th>
-        <th>republic</th>
-        <th>district</th>
-        <th>region</th>
+        <th>Область, край, республика</th>
+        <th>Районное лесничество</th>
+        <th>Участковое лесничество</th>
         <th>quarter</th>
         <th>distance</th>
         <th>renter</th>
@@ -74,9 +73,7 @@
     </tr>
     </thead>
     <tbody>
-    @foreach($boxs as $box)
         <tr>
-            <td>{{ $loop->iteration }}</td>
             <td>{{ $box->title }}</td>
             <td>{{ $box->first->republic }}</td>
             <td>{{ $box->first->district }}</td>
@@ -148,6 +145,5 @@
             <td>{{ $box->third->podlesokTwo }}</td>
             <td>{{ $box->third->podlesokThree }}</td>
         </tr>
-    @endforeach
     </tbody>
 </table>
