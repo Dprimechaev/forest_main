@@ -137,10 +137,10 @@
                                 <tbody>
                                 <tr>
                                     <td class="td_color">
-                                        <input type="text" value="0" name="number">
+                                        <input type="text" name="number">
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0" name="area">
+                                        <input type="text" name="area">
                                     </td>
                                     <td class="td_color">
                                         <select name="earthCategory">
@@ -179,7 +179,7 @@
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="height">
+                                        <input type="number" name="height">
                                     </td>
                                     <td class="td_color">
                                         <select name="exposition">
@@ -191,7 +191,7 @@
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0" name="slope">
+                                        <input type="text" name="slope">
                                     </td>
                                     <td class="td_color">
                                         <select name="erozionForm">
@@ -241,10 +241,10 @@
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0" name="percent">
+                                        <input type="text" name="percent">
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0" name="firstPtk">
+                                        <input type="text" name="firstPtk">
                                     </td>
                                     <td class="td_color">
                                         <select name="secondEvent">
@@ -256,7 +256,7 @@
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0" name="secondPtk">
+                                        <input type="text" name="secondPtk">
                                     </td>
                                     <td class="td_color">
                                         <select name="thirdEvent">
@@ -268,7 +268,7 @@
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0" name="thirdPtk">
+                                        <input type="text" name="thirdPtk">
                                     </td>
                                     <td class="td_color">
                                         <select name="target">
@@ -344,14 +344,14 @@
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0" name="cutYear">
+                                        <input type="text" name="cutYear">
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0" name="allStump">
-                                        <input type="text" value="0" name="pineStump">
+                                        <input type="text" name="allStump">
+                                        <input type="text" name="pineStump">
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0" name="stumpDiameter">
+                                        <input type="text" name="stumpDiameter">
                                     </td>
                                     <td class="td_color">
                                         <select name="cutType">
@@ -370,15 +370,15 @@
                                 <tr>
                                     <th class="th_color">Захлам, м^3/га</th>
                                     <th class="th_color">
-                                        <input type="number" value="0" name="littering">
+                                        <input type="number" name="littering">
                                     </th>
                                     <th class="th_color">В т.ч. ликвид</th>
                                     <th class="th_color">
-                                        <input type="number" value="0" name="liquid">
+                                        <input type="number" name="liquid">
                                     </th>
                                     <th class="th_color">Сухостой, м^3/га</th>
                                     <th class="th_color">
-                                        <input type="number" value="0" name="deadwood">
+                                        <input type="number" name="deadwood">
                                     </th>
                                 </tr>
                                 </thead>
@@ -424,19 +424,19 @@
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="row[{{ $index }}][age]">
+                                        <input type="number" name="row[{{ $index }}][age]">
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="row[{{ $index }}][height]">
+                                        <input type="number" name="row[{{ $index }}][height]">
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="row[{{ $index }}][diameter]">
+                                        <input type="number" name="row[{{ $index }}][diameter]">
                                     </td>
                                     <td class="td_color">
                                         <input type="number" name="row[{{ $index }}][class]">
                                     </td>
                                     <td class="td_color">
-                                        <select name="row[{{ $index }}][density]">
+                                        <select name="row[{{ $index }}][origin]">
                                             @foreach($handbooks as $handbook)
                                                 @if($handbook->key === 'Происхождение')
                                                     <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
@@ -445,13 +445,13 @@
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" value="0" name="row[{{ $index }}][origin]">
+                                        <input type="integer" name="row[{{ $index }}][p]">
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="row[{{ $index }}][g]">
+                                        <input type="number" name="row[{{ $index }}][g]">
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="row[{{ $index }}][stock]">
+                                        <input type="number" name="row[{{ $index }}][stock]">
                                     </td>
                                 </tr>
                                 <input type="button" class="mb-3 mr-3" style="background-color: #277648; color:white;" onclick="countRabbits()" value="+">
@@ -494,16 +494,16 @@
                                     <td class="td_color">
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="thousands">
+                                        <input type="number" name="thousands">
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="height">
+                                        <input type="number" name="height">
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="age">
+                                        <input type="number" name="age">
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="koefOne">
+                                        <input type="number" name="koefOne">
                                     </td>
                                     <td class="td_color">
                                         <select name="podrostOne">
@@ -515,7 +515,7 @@
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="koefTwo">
+                                        <input type="number" name="koefTwo">
                                     </td>
                                     <td class="td_color">
                                         <select name="podrostTwo">
@@ -527,7 +527,7 @@
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="koefThree">
+                                        <input type="number" name="koefThree">
                                     </td>
                                     <td class="td_color">
                                         <select name="podrostThree">
@@ -602,7 +602,7 @@
                                 <tbody id="tierMDS">
                                 <tr>
                                     <td>
-                                        <select id ="mds" name="row[{{ $index }}][class]">
+                                        <select id ="mds" name="title">
                                             @foreach($handbooks as $handbook)
                                                 @if($handbook->key === 'Макет')
                                                     <option value="{{ $handbook->value }}">{{ $handbook->value }}</option>
@@ -611,28 +611,28 @@
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                        <input type="number" name="year_created">
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                        <input type="number" name="cultivation_method">
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                        <input type="number" name="method_created">
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                        <input type="number" name="distance_between">
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                        <input type="number" name="distance_into">
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                        <input type="number" name="seats_number">
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                        <input type="number" name="condition">
                                     </td>
                                     <td class="td_color">
-                                        <input type="number" value="0" name="row[{{ $index }}][density]">
+                                        <input type="number" name="cause">
                                     </td>
                                     <td>
                                         <button type="button" class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Открыть второе модальное окно</button>

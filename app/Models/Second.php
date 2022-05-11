@@ -20,7 +20,7 @@ class Second extends Model
         'height',
         'diameter',
         'class',
-        'density',
+        'p',
         'g',
         'stock',
         'card_id'

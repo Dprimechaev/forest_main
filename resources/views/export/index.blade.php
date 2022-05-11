@@ -42,6 +42,35 @@
         <th>littering</th>
         <th>liquid</th>
         <th>deadwood</th>
+        @foreach($box->second as $second)
+            <th>Ярус</th>
+            <th>Коэффициент состава</th>
+            <th>Порода</th>
+            <th>Возраст, лет</th>
+            <th>Высота, м</th>
+            <th>Диаметр, м</th>
+            <th>Класс товарности</th>
+            <th>Происхождение</th>
+            <th>Р относ.</th>
+            <th>G</th>
+            <th>Запас, м. куб.</th>
+        @endforeach
+        <th>Подрост</th>
+        <th>Кол. тысяч</th>
+        <th>Высота, м</th>
+        <th>Возраст, л</th>
+        <th>К 1</th>
+        <th>Порода 1</th>
+        <th>К 2</th>
+        <th>Порода 2</th>
+        <th>К 3</th>
+        <th>Порода 3</th>
+        <th>Оценка</th>
+        <th>Подлесок</th>
+        <th>Густота</th>
+        <th>Порода 1</th>
+        <th>Порода 2</th>
+        <th>Порода 3</th>
     </tr>
     </thead>
     <tbody>
@@ -101,6 +130,23 @@
                 <td>{{ $second->g }}</td>
                 <td>{{ $second->stock }}</td>
             @endforeach
+            <td></td>
+            <td>{{ $box->third->thousands }}</td>
+            <td>{{ $box->third->height }}</td>
+            <td>{{ $box->third->age }}</td>
+            <td>{{ $box->third->koefOne }}</td>
+            <td>{{ $box->third->podrostOne }}</td>
+            <td>{{ $box->third->koefTwo }}</td>
+            <td>{{ $box->third->podrostTwo }}</td>
+            <td>{{ $box->third->koefThree }}</td>
+            <td>{{ $box->third->podrostThree }}</td>
+            <td>{{ $box->third->por }}</td>
+            <td>{{ $box->third->Oc }}</td>
+            <td></td>
+            <td>{{ $box->third->density }}</td>
+            <td>{{ $box->third->podlesokOne }}</td>
+            <td>{{ $box->third->podlesokTwo }}</td>
+            <td>{{ $box->third->podlesokThree }}</td>
         </tr>
     @endforeach
     </tbody>
