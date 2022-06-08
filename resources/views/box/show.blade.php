@@ -140,7 +140,7 @@
                                         <input type="text" name="number">
                                     </td>
                                     <td class="td_color">
-                                        <input type="text" name="area">
+                                        <input type="number" name="area">
                                     </td>
                                     <td class="td_color">
                                         <select name="earthCategory">

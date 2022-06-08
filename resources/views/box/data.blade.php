@@ -7,8 +7,8 @@
         <th class="td_color">Общая площадь</th>
         </thead>
         <tbody>
-        <td class="td_color">1</td>
-        <td class="td_color">2</td>
+        <td class="td_color">{{ $number }}</td>
+        <td class="td_color">{{ $summ }}</td>
         </tbody>
     </table>
 @endsection

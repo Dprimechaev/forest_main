@@ -45,13 +45,13 @@ class BoxController extends Controller
         $validator = Validator::make($request->all(), $rules);
         if ($validator->fails()) {
             return redirect()->route('home.index')->withErrors($validator);
-        } else {
+        }
             $input = $request->all();
             unset($input['_token']);
             $input['user_id'] = Auth::id();
             $box = Box::create($input);
-            return redirect()->back()->with('succes', 'БД успешно создана');
-        }
+
+        return redirect()->back()->with('succes', 'БД успешно создана');
     }
     /**
      * Display the specified resource.
