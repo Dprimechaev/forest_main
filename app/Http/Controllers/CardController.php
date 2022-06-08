@@ -37,16 +37,6 @@ use Symfony\Component\Console\Input\Input;
 class CardController extends Controller
 {
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -80,11 +70,11 @@ class CardController extends Controller
             $maketValidated = $maketCardStoreRequest->validated();
             $maketValidated['card_id'] = $card->id;
             switch ($maketCardStoreRequest->title){
-                case 'Лесные культуры':
-                    ForestCulture::create($maketValidated);
-                    break;
                 case 'Повреждение насаждения':
                     StandDamage::create($maketValidated);
+                    break;
+                case 'Лесные культуры':
+                    ForestCulture::create($maketValidated);
                     break;
                 case 'Земли линейного протяжения':
                     LinearLands::create($maketValidated);

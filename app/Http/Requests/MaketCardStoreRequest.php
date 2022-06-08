@@ -26,6 +26,17 @@ class MaketCardStoreRequest extends FormRequest
         $rules = [];
 
         switch ($this->title) {
+            case 'Повреждение насаждения':
+                $rules = [
+                    'damage_type' => '',
+                    'damage_year' => '',
+                    'damaged_tree' => '',
+                    'disease_type' => '',
+                    'disease_damage' => '',
+                    'pest_type' => '',
+                    'pest_damage' => '',
+                ];
+                break;
             case 'Лесные культуры':
                 $rules = [
                     'year_created' => '',
@@ -36,17 +47,6 @@ class MaketCardStoreRequest extends FormRequest
                     'seats_number' => '',
                     'condition' => '',
                     'cause' => '',
-                ];
-                break;
-            case 'Повреждение насаждения':
-                $rules = [
-                    'damage_type' => '',
-                    'damage_year' => '',
-                    'damaged_tree' => '',
-                    'disease_type' => '',
-                    'disease_damage' => '',
-                    'pest_type' => '',
-                    'pest_damage' => '',
                 ];
                 break;
             case 'Земли линейного протяжения':

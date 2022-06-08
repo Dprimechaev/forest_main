@@ -17,5 +17,7 @@ class StandDamage extends Model
         'disease_damage',
         'pest_type',
         'pest_damage',
+        'created_at',
+        'updated_at'
     ];
 }

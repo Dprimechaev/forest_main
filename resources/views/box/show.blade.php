@@ -445,7 +445,7 @@
                                         </select>
                                     </td>
                                     <td class="td_color">
-                                        <input type="integer" name="row[{{ $index }}][p]">
+                                        <input type="number" name="row[{{ $index }}][p]">
                                     </td>
                                     <td class="td_color">
                                         <input type="number" name="row[{{ $index }}][g]">

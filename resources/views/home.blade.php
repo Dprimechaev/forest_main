@@ -31,6 +31,7 @@
         <th scope="col">Перейти</th>
         <th scope="col">Удалить</th>
         <th scope="col">Экспорт xlsx</th>
+        <th scope="col">Статистика</th>
     </tr>
     </thead>
     <tbody>
@@ -53,6 +54,12 @@
                 <form action="{{ route('box.export', $box) }}" method="post">
                     @csrf
                 <button class="mt-3 btn btn-success">Загрузить</button>
+                </form>
+            </td>
+            <td>
+                <form action="{{ route('statistic', $box) }}" method="post">
+                    @csrf
+                    <button class="mt-3 btn btn-success">Статистика</button>
                 </form>
             </td>
         </tr>
